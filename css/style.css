@@ -262,7 +262,7 @@ button:focus {
 }
 
 .intro-section .content {
-  max-width: 42rem;
+  max-width: 43rem;
   margin-top: 2.5rem;
 }
 
@@ -549,7 +549,7 @@ button:focus {
 /* animate */
 
 @media (min-width: 992px) {
-  .view-port {
+  body {
     overflow: hidden;
     min-height: 100vh;
   }
@@ -679,9 +679,11 @@ button:focus {
     right: -8.5rem;
     top: 0rem;
   }
+
   .tabbed-content {
     padding: 1rem 0 1rem;
   }
+
   .cta-section .content {
     padding: 3rem 5.5rem 0;
   }

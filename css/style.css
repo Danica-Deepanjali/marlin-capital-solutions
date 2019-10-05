@@ -86,7 +86,7 @@ button:focus {
 
 #bgVideo {
   position: fixed;
-  left:0;
+  left: 0;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -137,19 +137,19 @@ button:focus {
   left: 3rem;
   bottom: 2rem;
   min-height: 31rem;
-   display: -webkit-box;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -ms-flex-flow:column wrap;
-  flex-flow:column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.side-content .modal-links{
+.side-content .modal-links {
   margin-left: -2.5rem;
 }
 .side-content .modal-links a {
@@ -164,9 +164,9 @@ button:focus {
 }
 
 .side-content img {
-    max-width: 45px;
-    height: auto;
-  }
+  max-width: 45px;
+  height: auto;
+}
 
 /* main-content */
 
@@ -298,7 +298,7 @@ button:focus {
   margin-bottom: 4rem;
 }
 
-.lets-talk h3{
+.lets-talk h3 {
   font-size: 16px;
 }
 
@@ -578,7 +578,8 @@ button:focus {
     -webkit-transition: opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
     transition: opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear;
-    transition: transform 0.7s ease-in-out, opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
+    transition: transform 0.7s ease-in-out, opacity 0.4s linear,
+      -webkit-transform 0.7s ease-in-out;
   }
 
   .reveal-content {
@@ -588,26 +589,26 @@ button:focus {
     cursor: pointer;
   }
 
-  .reveal-content *{
-    -webkit-transition:all 0.25s ease-in-out 0.2s;
-    -o-transition:all 0.25s ease-in-out 0.2s;
-    transition:all 0.25s ease-in-out 0.2s;
+  .reveal-content * {
+    -webkit-transition: all 0.25s ease-in-out 0.2s;
+    -o-transition: all 0.25s ease-in-out 0.2s;
+    transition: all 0.25s ease-in-out 0.2s;
   }
 
   .oval-container {
     -webkit-transition: all 0.8s linear;
-    -o-transition: all 0.8s linear ;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
   }
 
-    .concentric-circles {
+  .concentric-circles {
     position: absolute;
     top: 20.5rem;
-    left: calc(100% - 6rem);
+    right: 6rem;
     z-index: 10;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
@@ -630,7 +631,6 @@ button:focus {
   .cta-text.text-center {
     margin-top: 2rem;
   }
-
 
   .fadeOut .intro-section {
     padding: 0;
@@ -662,7 +662,7 @@ button:focus {
 
   .fadeOut .concentric-circles {
     top: 2rem;
-    left: 50%;
+    right: 50%;
   }
 
   .fadeOut .intro-section .oval-container {
@@ -686,8 +686,8 @@ button:focus {
   }
   .side-content {
     left: 2rem;
-    min-height:25rem;
-    bottom:0.5rem;
+    min-height: 25rem;
+    bottom: 0.5rem;
   }
 
   h3,
@@ -740,7 +740,7 @@ button:focus {
 
   .concentric-circles {
     top: 18rem;
-    left: calc(100% - 6.5rem);
+    right:6.5rem;
   }
 
   .oval-container {
@@ -860,7 +860,7 @@ button:focus {
     display: inline-block;
     margin: 1rem;
     font-size: 10px;
-    line-height:1.2;
+    line-height: 1.2;
     padding: 1.5rem 0;
   }
 
@@ -878,17 +878,17 @@ button:focus {
     padding-right: 20px;
   }
 
-  .cta-section .container{
-    padding:0;
+  .cta-section .container {
+    padding: 0;
   }
 
   .cta-section .intro {
     text-align: left;
   }
 
-   .cta-section .intro p{
-     margin-top: 1.75rem;
-   }
+  .cta-section .intro p {
+    margin-top: 1.75rem;
+  }
   .cta-text.text-center {
     background: #fff;
     margin-left: -15px;
@@ -961,7 +961,7 @@ button:focus {
 
   .tabs-side .tab-pane-content .green-link {
     margin-top: 3rem;
-    font-size:15px;
+    font-size: 15px;
   }
 
   .tabs-side .tab-pane.active .tab-pane-content * {
@@ -978,7 +978,7 @@ button:focus {
   .tab-pane.active::before {
     color: #00a68a;
     font-size: 29px;
-line-height: 34px;
+    line-height: 34px;
   }
 
   .tab-pane .green-link {
@@ -1118,7 +1118,7 @@ line-height: 34px;
 
   .concentric-circles {
     top: 14.5rem;
-    left: calc(100% - 6.5rem);
+    right: 6.5rem;
   }
 
   .cta-section {
@@ -1131,6 +1131,7 @@ line-height: 34px;
 
   .reveal-content:after {
     height: 3rem;
+    bottom: -1rem;
   }
 
   .oval-container img.half-circles {

@@ -632,18 +632,18 @@ button:focus {
     margin-top: 2rem;
   }
 
-  .fadeOut .intro-section {
+  .animate .intro-section {
     padding: 0;
   }
 
-  .fadeOut .intro-section .intro-content {
+  .animate .intro-section .intro-content {
     -webkit-transform: translateY(-200%);
     -ms-transform: translateY(-200%);
     transform: translateY(-200%);
     opacity: 0;
   }
 
-  .fadeOut .reveal-content {
+  .animate .reveal-content {
     padding: 0;
     -webkit-transform: translateY(-300%);
     -ms-transform: translateY(-300%);
@@ -651,21 +651,21 @@ button:focus {
     opacity: 0;
   }
 
-  .fadeOut .reveal-content * {
+  .animate .reveal-content * {
     height: 0;
     margin: 0;
   }
 
-  .fadeOut .cta-section {
+  .animate .cta-section {
     max-height: 100%;
   }
 
-  .fadeOut .concentric-circles {
+  .animate .concentric-circles {
     top: 2rem;
     right: 50%;
   }
 
-  .fadeOut .intro-section .oval-container {
+  .animate .intro-section .oval-container {
     right: -8.5rem;
     top: 0;
   }
@@ -700,7 +700,7 @@ button:focus {
     font-size: 5rem;
   }
 
-  .fadeOut .intro-section .oval-container {
+  .animate .intro-section .oval-container {
     right: -8.5rem;
     top: 0rem;
   }

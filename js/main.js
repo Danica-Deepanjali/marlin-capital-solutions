@@ -1,7 +1,7 @@
 jQuery(function($) {
   $(document).ready(function() {
     $("#getStarted,#revealcontent").click(function() {
-      $("body").toggleClass("fadeOut");
+      $("body").toggleClass("animate");
     });
 
     // smooth scrolling
@@ -19,12 +19,6 @@ jQuery(function($) {
 
 
   // scroll on laptops
-
-  // $(window).on('mousewheel DOMMouseScroll', function (e) {
-  //   $("body").toggleClass('fadeOut');
-  //   //prevent page fom scrolling
-  //   return false;
-  // });
 
   // checks if the specified event is supported by the browser.
   function isEventSupported(eventName) {
@@ -49,9 +43,9 @@ jQuery(function($) {
     // deltaY for wheel event
     // wheelData for mousewheel event
     if (delta > 0) {
-      $("body").addClass('fadeOut');
+      $("body").addClass('animate');
     } else {
-      $("body").removeClass('fadeOut');
+      $("body").removeClass('animate');
     }
   });
 

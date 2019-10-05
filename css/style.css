@@ -6,6 +6,8 @@ body {
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   color: #747474;
   background-repeat: no-repeat;
@@ -135,8 +137,9 @@ button:focus {
 .side-content {
   position: absolute;
   left: 3rem;
-  bottom: 2rem;
-  min-height: 31rem;
+  top: 27.5rem;
+  bottom: -0.5rem;
+  height:auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,17 +150,22 @@ button:focus {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .side-content .modal-links {
   margin-left: -2.5rem;
 }
+
 .side-content .modal-links a {
   display: block;
   color: #000;
   text-transform: uppercase;
-  font-size: 12px;
-  margin: 0 0 7rem 0;
+  font-size: 10px;
+  line-height: 13px;
+  margin: 0 0 6rem 0;
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
@@ -272,7 +280,7 @@ button:focus {
 /* needs section */
 
 .cta-section .cta-content {
-  padding: 3rem 7.5rem 0;
+  padding: 3rem 6.5rem 0;
 }
 
 .reveal-content {
@@ -374,7 +382,7 @@ button:focus {
   margin-bottom: 1rem;
   line-height: 1.19;
   border: none;
-  font-weight: 300;
+  font-weight: 400;
   padding: 0.5rem 1rem;
 }
 
@@ -681,19 +689,25 @@ button:focus {
 /* -------- max-width basis --------- */
 
 @media (max-width: 1375px) {
-  .container {
-    max-width: 1000px;
-  }
-  .side-content {
-    left: 2rem;
-    min-height: 25rem;
-    bottom: 0.5rem;
-  }
-
-  h3,
+    h3,
   .h3 {
     line-height: 1.4;
   }
+
+  .container {
+    max-width: 1000px;
+  }
+
+  .side-content {
+    left: 2rem;
+    bottom: 0rem;
+    top: 26.25rem;
+  }
+
+  .side-content .modal-links a{
+    margin: 0 0 6rem 0;
+  }
+
 
   .intro-section h1 {
     margin-left: -2.75rem;
@@ -709,8 +723,8 @@ button:focus {
     padding: 1rem 0 1rem;
   }
 
-  .cta-section .content {
-    padding: 3rem 5.5rem 0;
+  .cta-section .cta-content {
+    padding: 2.5em 5rem 0;
   }
 
   .tabs-side .nav-tabs .nav-link {
@@ -785,6 +799,9 @@ button:focus {
     max-width: 100%;
   }
 
+  .intro-section .content{
+    margin-top: 1.5rem;
+  }
   .get-started-btn {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -816,7 +833,7 @@ button:focus {
   .tab-pane .green-link img,
   .tabbed-content nav,
   .concentric-circles {
-    display: none;
+    display: none!important;
   }
 
   .oval-container {
@@ -850,10 +867,17 @@ button:focus {
     text-align: center;
   }
 
+  .side-content .modal-links {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
   .side-content .modal-links a {
-    -webkit-writing-mode: inherit;
-    -ms-writing-mode: inherit;
-    writing-mode: inherit;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
@@ -864,13 +888,19 @@ button:focus {
     padding: 1.5rem 0;
   }
 
+  .side-content .modal-links a[data-target="#privacy-policy"]{
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
   .cta-section {
     background: transparent;
     max-height: 100%;
   }
 
   .cta-section .cta-content {
-    padding: 40px 15px;
+    padding:35px 15px 15px;
   }
 
   .intro-section .container {
@@ -897,12 +927,18 @@ button:focus {
   }
 
   /* accordion on mobile */
+  .intro-section {
+    padding: 3rem 0 0.25rem;
+}
+  .tabbed-content{
+    margin-top: 2.5rem;
+  }
   .tabs-side .tab-content {
     width: 100%;
   }
 
   .tabs-side .tab-content .tab-pane {
-    margin: 0;
+    margin: 0 8px;
     padding: 25px 20px;
     background: #fff;
     margin-bottom: 1.5rem;
@@ -913,6 +949,7 @@ button:focus {
     position: relative;
     display: block;
     cursor: pointer;
+    border-radius: 6px;
   }
 
   .tabbed-content .tab-pane::before {
@@ -922,10 +959,13 @@ button:focus {
     line-height: 31px;
     font-family: "Rubik", sans-serif;
     max-width: 15rem;
-    font-weight: 300;
+    font-weight: 400;
     display: block;
   }
 
+  .tabs-side .tab-content #tab-back:before {
+    max-width: 12rem;
+}
   .tabbed-content .tab-pane::after {
     position: absolute;
     right: 1.75rem;
@@ -1000,6 +1040,11 @@ button:focus {
   .intro-section h1 {
     font-size: 3rem;
   }
+
+  .modal-title{
+    margin-bottom: 1rem;
+    margin-top: -1.5rem;
+  }
 }
 @media (max-width: 350px) {
   html.body {
@@ -1039,18 +1084,20 @@ button:focus {
   }
 }
 
-/* **** on window height basis **** */
-/* @media (min-height: 850px) {
-  .modal-body {
-    height: 38.94rem;
-  }
-} */
+
 
 @media (min-width: 991px) and (max-height: 799px) {
   .main-content {
     margin-top: 6rem;
   }
 
+  .logo-wrapper{
+    top: 2.4rem;
+  }
+
+  .topbar-content{
+    top: 3.75rem;
+  }
   .modal-body {
     height: 29rem;
     padding: 1.5rem 1.5rem;
@@ -1155,5 +1202,10 @@ button:focus {
 
   .tabs-side .oval-container img.half-circles {
     width: 11rem;
+  }
+
+  .side-content{
+    top: 19.5rem;
+    bottom: -1.45rem;
   }
 }

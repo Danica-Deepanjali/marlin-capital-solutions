@@ -98,7 +98,7 @@ button:focus {
 }
 
 /* topbar */
-.topbar{
+.topbar {
   position: fixed;
   width: 100%;
   height: 9rem;
@@ -114,6 +114,8 @@ button:focus {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  z-index: 100;
+  transition: all 0.2s ease;
 }
 
 .logo-wrapper {
@@ -137,8 +139,7 @@ button:focus {
   vertical-align: text-top;
 }
 
-.topbar a.phone:hover,
-.side-content .modal-links a:hover {
+.topbar a.phone:hover {
   color: #4b537d;
 }
 
@@ -149,7 +150,7 @@ button:focus {
   left: 3rem;
   top: 27.5rem;
   bottom: -0.5rem;
-  height:auto;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,16 +170,25 @@ button:focus {
   margin-left: -1.75rem;
 }
 
+.side-content #subNav {
+  cursor: pointer;
+}
+
 .side-content .modal-links a {
   display: block;
   color: #000;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 9px;
   line-height: 13px;
   margin: 0 0 6rem 0;
+  font-weight: 300;
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
+}
+
+.side-content .modal-links a:hover {
+  color: #00a589;
 }
 
 .side-content img {
@@ -261,7 +271,7 @@ button:focus {
 }
 
 .green-link:hover {
-  letter-spacing: 0.25em;
+  letter-spacing: 0.35em;
 }
 
 .intro-section {
@@ -299,17 +309,25 @@ button:focus {
   text-align: center;
 }
 
+.reveal-content h3 {
+  font-weight: 400;
+}
+
 .reveal-content:after {
   content: "";
   position: absolute;
-  bottom: -1.5rem;
-  height: 3.5rem;
+  height: 2.5rem;
   width: 1px;
+  top:2.5rem;
   margin-left: -0.5px;
   left: 50%;
   background: #4b537d;
+  transition: all 0.2s ease;
 }
 
+.reveal-content:hover:after{
+height:7rem ;
+}
 .lets-talk {
   text-align: center;
   color: #00a68a;
@@ -562,21 +580,28 @@ button:focus {
   }
 
   .intro-section .intro-content {
-    -webkit-transition: opacity 0.4s linear,
-     -webkit-transform 0.7s ease-in-out;transition: opacity 0.4s linear,
-     -webkit-transform 0.7s ease-in-out;
-     transition: transform 0.7s ease-in-out, opacity 0.4s linear;
-     transition: transform 0.7s ease-in-out, opacity 0.4s linear,
-     -webkit-transform 0.7s ease-in-out;
+    -webkit-transition: opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
+    transition: opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
+    transition: transform 0.7s ease-in-out, opacity 0.4s linear;
+    transition: transform 0.7s ease-in-out, opacity 0.4s linear,
+      -webkit-transform 0.7s ease-in-out;
   }
 
-  .reveal-content {
-    -webkit-transition: all 0.25s ease-in-out 0.2s;
-    -o-transition: all 0.25s ease-in-out 0.2s;
-    transition: all 0.25s ease-in-out 0.2s;
+  .reveal-content{
     cursor: pointer;
   }
 
+
+  .reveal-content:hover {
+    padding-bottom: 7rem;
+  }
+
+
+  .cta-section.hover{
+    max-height: 12rem;
+  }
+
+  .reveal-content,
   .reveal-content * {
     -webkit-transition: all 0.25s ease-in-out 0.2s;
     -o-transition: all 0.25s ease-in-out 0.2s;
@@ -607,9 +632,7 @@ button:focus {
     width: 100%;
     bottom: 0;
     max-height: 126px;
-    -webkit-transition: max-height 0.5s linear;
-    -o-transition: max-height 0.5s linear;
-    transition: max-height 0.5s linear;
+    transition: max-height 0.5s linear,padding-bottom 0.2s ease;
   }
 
   .cta-section .cta-content {
@@ -670,7 +693,7 @@ button:focus {
 /* -------- max-width basis --------- */
 
 @media (max-width: 1375px) {
-    h3,
+  h3,
   .h3 {
     line-height: 1.4;
   }
@@ -685,10 +708,9 @@ button:focus {
     top: 26.25rem;
   }
 
-  .side-content .modal-links a{
+  .side-content .modal-links a {
     margin: 0 0 6rem 0;
   }
-
 
   .intro-section h1 {
     margin-left: -2.75rem;
@@ -735,7 +757,7 @@ button:focus {
 
   .concentric-circles {
     top: 18rem;
-    right:6.5rem;
+    right: 6.5rem;
   }
 
   .oval-container {
@@ -780,19 +802,39 @@ button:focus {
     max-width: 100%;
   }
 
-  .intro-section .content{
+  .intro-section .content {
     margin-top: 1.5rem;
   }
   .get-started-btn {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    height: 7.5rem;
+    width: 7.5rem;
+    padding: 1rem;
+    letter-spacing: 0.19em;
+    color: #fff;
+    background: #00a589;
+    font-size: 1rem;
   }
 
-
   .topbar {
-    position: absolute;
-    padding: 2rem 1.5rem 1rem;
+    padding: 2rem 1.5rem 2rem;
+  }
+
+  /* sticky-topbar */
+  .topbar.sticky {
+    background: #fff;
+    height: 7rem;
+    box-shadow: 0px 10px 23px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.25rem 1rem;
+  }
+
+  .topbar.sticky .get-started-btn {
+    height: 6rem;
+    width: 6rem;
+    padding: 0.5rem;
+    letter-spacing: 1px;
   }
   .intro-section h1 {
     margin-left: 0;
@@ -808,7 +850,7 @@ button:focus {
   .tab-pane .green-link img,
   .tabbed-content nav,
   .concentric-circles {
-    display: none!important;
+    display: none !important;
   }
 
   .oval-container {
@@ -825,16 +867,6 @@ button:focus {
     transform: none;
   }
 
-  .get-started-btn {
-    height: 7.5rem;
-    width: 7.5rem;
-    padding: 1rem;
-    letter-spacing: 0.19em;
-    color: #fff;
-    background: #00a68a;
-    font-size: 1rem;
-  }
-
   .side-content {
     position: static;
     background: #fff;
@@ -844,14 +876,14 @@ button:focus {
 
   .side-content .modal-links {
     margin-left: 0;
-    width:100%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-}
+  }
 
   .side-content .modal-links a {
     -webkit-transform: none;
@@ -859,12 +891,12 @@ button:focus {
     transform: none;
     display: inline-block;
     margin: 1rem;
-    font-size: 10px;
+    font-size: 9px;
     line-height: 1.2;
     padding: 1.5rem 0;
   }
 
-  .side-content .modal-links a[data-target="#privacy-policy"]{
+  .side-content .modal-links a[data-target="#privacy-policy"] {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
@@ -876,7 +908,7 @@ button:focus {
   }
 
   .cta-section .cta-content {
-    padding:35px 15px 15px;
+    padding: 35px 15px 15px;
   }
 
   .intro-section .container {
@@ -905,8 +937,8 @@ button:focus {
   /* accordion on mobile */
   .intro-section {
     padding: 2.5rem 0 0.25rem;
-}
-  .tabbed-content{
+  }
+  .tabbed-content {
     margin-top: 2.5rem;
   }
   .tabs-side .tab-content {
@@ -941,7 +973,7 @@ button:focus {
 
   .tabs-side .tab-content #tab-back:before {
     max-width: 12rem;
-}
+  }
   .tabbed-content .tab-pane::after {
     position: absolute;
     right: 1.75rem;
@@ -1017,7 +1049,7 @@ button:focus {
     font-size: 3rem;
   }
 
-  .modal-title{
+  .modal-title {
     margin-bottom: 1rem;
     margin-top: -1.5rem;
   }
@@ -1066,7 +1098,7 @@ button:focus {
     margin-top: 6rem;
   }
 
-  .topbar{
+  .topbar {
     height: 7rem;
     padding: 2.5rem 2.5rem 1rem;
   }
@@ -1177,15 +1209,16 @@ button:focus {
     width: 11rem;
   }
 
-  .side-content{
+  .side-content {
     top: 19.5rem;
     bottom: -1.45rem;
   }
 }
 
 /* height basis */
-@media (min-height:1000px){
-  .animate .intro-section .oval-container{
+@media (min-height: 1000px) {
+  .animate .intro-section .oval-container {
     top: 4.5rem;
+    right: -4.5rem;
   }
 }

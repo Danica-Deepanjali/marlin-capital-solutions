@@ -1,53 +1,50 @@
 jQuery(function($) {
   $(document).ready(function() {
-    $("#getStarted,#revealcontent").click(function() {
+    $("#getStarted,#revealContent,#subNav").click(function() {
       $("body").toggleClass("animate");
     });
-
-    // smooth scrolling
-    $(document).on("click", "a[href*=letsTalk]", function(event) {
-      if ($(this.hash).length) {
-        $("html, body").animate(
-          {
-            scrollTop: $(this.hash).offset().top - 100
-          },
-          500
-        );
-      }
-    });
   });
 
-
+  $('#revealContent').hover(
+    function () { $(this).parents(".cta-section").addClass('hover') },
+    function () { $(this).parents(".cta-section").removeClass('hover') }
+  )
   // scroll on laptops
+  $(window)
+    .on("resize", function() {
+      if ($(window).width() > 991) {
+        // checks if the specified event is supported by the browser.
+        function isEventSupported(eventName) {
+          var el = document.createElement("div");
+          eventName = "on" + eventName;
+          var isSupported = eventName in el;
+          if (!isSupported) {
+            el.setAttribute(eventName, "return;");
+            isSupported = typeof el[eventName] == "function";
+          }
+          el = null;
+          return isSupported;
+        }
 
-  // checks if the specified event is supported by the browser.
-  function isEventSupported(eventName) {
-    var el = document.createElement('div');
-    eventName = 'on' + eventName;
-    var isSupported = (eventName in el);
-    if (!isSupported) {
-      el.setAttribute(eventName, 'return;');
-      isSupported = typeof el[eventName] == 'function';
-    }
-    el = null;
-    return isSupported;
-  }
-
-  // in browsers where both events are supported.
-  var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
-
-  // Now bind the event to the desired element
-  $('body').on(wheelEvent, function (e) {
-    var oEvent = e.originalEvent,
-      delta = oEvent.deltaY || oEvent.wheelDelta;
-    // deltaY for wheel event
-    // wheelData for mousewheel event
-    if (delta > 0) {
-      $("body").addClass('animate');
-    } else {
-      $("body").removeClass('animate');
-    }
-  });
+        // in browsers where both events are supported.
+        var wheelEvent = isEventSupported("mousewheel")
+          ? "mousewheel"
+          : "wheel";
+        // Now bind the event to the desired element
+        $("body").on(wheelEvent, function(e) {
+          var oEvent = e.originalEvent,
+            delta = oEvent.deltaY || oEvent.wheelDelta;
+          // deltaY for wheel event
+          // wheelData for mousewheel event
+          if (delta > 0) {
+            $("body").addClass("animate");
+          } else {
+            $("body").removeClass("animate");
+          }
+        });
+      }
+    })
+    .resize();
 
   // tabs to accordion
   $(window)
@@ -64,6 +61,29 @@ jQuery(function($) {
           container
             .find('.nav-tabs a[href$="#' + currId + '"]')
             .addClass("active");
+        });
+
+        // fix navbar on scroll in mobile devices
+        $(window).scroll(function() {
+          var topbar = $(".topbar");
+          topbarHeight = $(".topbar").height();
+          if ($(this).scrollTop() > topbarHeight) {
+            topbar.addClass("sticky");
+          } else {
+            topbar.removeClass("sticky");
+          }
+        });
+
+        // smooth scrolling on mobile
+        $(document).on("click", "a[href*=letsTalk]", function(event) {
+          if ($(this.hash).length) {
+            $("html, body").animate(
+              {
+                scrollTop: $(this.hash).offset().top - 100
+              },
+              500
+            );
+          }
         });
       }
     })

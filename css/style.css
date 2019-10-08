@@ -114,7 +114,7 @@ button:focus {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 1051;
   transition: all 0.2s ease;
 }
 
@@ -591,11 +591,9 @@ height:7rem ;
     cursor: pointer;
   }
 
-
   .reveal-content:hover {
     padding-bottom: 7rem;
   }
-
 
   .cta-section.hover{
     max-height: 12rem;
@@ -632,7 +630,7 @@ height:7rem ;
     width: 100%;
     bottom: 0;
     max-height: 126px;
-    transition: max-height 0.5s linear,padding-bottom 0.2s ease;
+    transition: max-height 0.5s linear;
   }
 
   .cta-section .cta-content {
@@ -1093,7 +1091,7 @@ height:7rem ;
 }
 
 /* for smaller height desktop and laptops */
-@media (min-width: 991px) and (max-height: 799px) {
+@media (min-width: 991px) and (max-height: 850px) {
   .main-content {
     margin-top: 6rem;
   }
@@ -1163,6 +1161,9 @@ height:7rem ;
     padding: 2rem 3.5rem 0;
   }
 
+  .cta-section.hover{
+    max-height:8rem;
+  }
   .oval-container {
     right: -4.5rem;
     top: 3.5rem;
@@ -1183,8 +1184,13 @@ height:7rem ;
 
   .reveal-content:after {
     height: 3rem;
-    bottom: -1rem;
   }
+  .hover .reveal-content{
+    padding-bottom: 8rem;
+}
+  .reveal-content:hover:after {
+    height: 8rem;
+}
 
   .oval-container img.half-circles {
     max-width: 22rem;

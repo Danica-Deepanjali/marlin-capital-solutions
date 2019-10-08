@@ -325,9 +325,9 @@ button:focus {
   transition: all 0.2s ease;
 }
 
-.reveal-content:hover:after{
+/* .reveal-content:hover:after{
 height:7rem ;
-}
+} */
 .lets-talk {
   text-align: center;
   color: #00a68a;
@@ -590,14 +590,14 @@ height:7rem ;
   .reveal-content{
     cursor: pointer;
   }
-
+/* 
   .reveal-content:hover {
     padding-bottom: 7rem;
   }
 
   .cta-section.hover{
     max-height: 12rem;
-  }
+  } */
 
   .reveal-content,
   .reveal-content * {
@@ -1161,9 +1161,9 @@ height:7rem ;
     padding: 2rem 3.5rem 0;
   }
 
-  .cta-section.hover{
+  /* .cta-section.hover{
     max-height:8rem;
-  }
+  } */
   .oval-container {
     right: -4.5rem;
     top: 3.5rem;
@@ -1185,12 +1185,13 @@ height:7rem ;
   .reveal-content:after {
     height: 3rem;
   }
-  .hover .reveal-content{
+
+  /* .hover .reveal-content{
     padding-bottom: 8rem;
-}
+  }
   .reveal-content:hover:after {
     height: 8rem;
-}
+} */
 
   .oval-container img.half-circles {
     max-width: 22rem;

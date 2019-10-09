@@ -1,6 +1,6 @@
-jQuery(function($) {
-  $(document).ready(function() {
-    $("#getStarted,#revealContent,#subNav").click(function() {
+jQuery(function ($) {
+  $(document).ready(function () {
+    $("#getStarted,#revealContent,#subNav").click(function () {
       $("body").toggleClass("animate");
     });
   });
@@ -11,8 +11,8 @@ jQuery(function($) {
   )
   // scroll on laptops
   $(window)
-    .on("resize", function() {
-      if ($(window).width() > 991) {
+    .on("resize", function () {
+      if ($(window).width() > 991 || $(window).height() > 629) {
         // checks if the specified event is supported by the browser.
         function isEventSupported(eventName) {
           var el = document.createElement("div");
@@ -31,7 +31,7 @@ jQuery(function($) {
           ? "mousewheel"
           : "wheel";
         // Now bind the event to the desired element
-        $("body").on(wheelEvent, function(e) {
+        $("body").on(wheelEvent, function (e) {
           var oEvent = e.originalEvent,
             delta = oEvent.deltaY || oEvent.wheelDelta;
           // deltaY for wheel event
@@ -48,10 +48,10 @@ jQuery(function($) {
 
   // tabs to accordion
   $(window)
-    .on("resize", function() {
-      if ($(window).width() < 992) {
+    .on("resize", function () {
+      if ($(window).width() < 992 || $(window).height() < 630) {
         $(".tab-content .tab-pane").removeClass("fade");
-        $(".tab-content .tab-pane").on("click", function() {
+        $(".tab-content .tab-pane").on("click", function () {
           var container = $(this).parents(".tabbed-content"),
             currId = $(this).attr("id"),
             items = container.find(".tab-pane");
@@ -64,7 +64,7 @@ jQuery(function($) {
         });
 
         // fix navbar on scroll in mobile devices
-        $(window).scroll(function() {
+        $(window).scroll(function () {
           var topbar = $(".topbar");
           topbarHeight = $(".topbar").height();
           if ($(this).scrollTop() > topbarHeight) {
@@ -75,7 +75,7 @@ jQuery(function($) {
         });
 
         // smooth scrolling on mobile
-        $(document).on("click", "a[href*=letsTalk]", function(event) {
+        $(document).on("click", "a[href*=letsTalk]", function (event) {
           if ($(this.hash).length) {
             $("html, body").animate(
               {

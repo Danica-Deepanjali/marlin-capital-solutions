@@ -75,17 +75,17 @@ jQuery(function ($) {
           }
         });
 
-        // smooth scrolling on mobile
-        $(document).on("click", "a[href*=letsTalk]", function (event) {
-          if ($(this.hash).length) {
-            $("html, body").animate(
-              {
-                scrollTop: $(this.hash).offset().top - 100
-              },
-              500
-            );
-          }
-        });
+        // // smooth scrolling on mobile
+        // $(document).on("click", "a[href*=letsTalk]", function (event) {
+        //   if ($(this.hash).length) {
+        //     $("html, body").animate(
+        //       {
+        //         scrollTop: $(this.hash).offset().top - 100
+        //       },
+        //       500
+        //     );
+        //   }
+        // });
       }
     })
     .resize();

@@ -67,6 +67,10 @@ button:focus {
   outline: 0;
 }
 
+*:focus{
+  outline:0;
+}
+
 /* common classes  */
 .text-blue {
   color: #4b537d;
@@ -579,7 +583,6 @@ button:focus {
 @media (min-width: 992px) and (min-height: 631px) {
   body {
     overflow: hidden;
-    min-height: 100vh;
   }
 
   .intro-section .intro-content {

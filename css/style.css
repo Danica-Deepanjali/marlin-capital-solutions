@@ -489,6 +489,7 @@ button:focus {
   right: 1.5rem;
   top: 1.5rem;
   font-weight: 700;
+  cursor:pointer;
 }
 
 .modal-body {
@@ -1305,11 +1306,11 @@ button:focus {
   }
 
   .concentric-circles {
-    top: 14.5rem;
+    top: 13.5rem;
   }
 
   .oval-container {
-    top: 5rem;
+    top: 4rem;
   }
 
   .animate .intro-section .oval-container {

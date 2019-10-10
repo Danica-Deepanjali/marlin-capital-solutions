@@ -14,6 +14,7 @@ jQuery(function ($) {
   $(window)
     .on("resize", function () {
       if ($(window).width() > 991 || $(window).height() > 629) {
+        $("body").removeClass("animate");
         // checks if the specified event is supported by the browser.
         function isEventSupported(eventName) {
           var el = document.createElement("div");

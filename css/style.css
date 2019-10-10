@@ -579,7 +579,7 @@ button:focus {
 @media (min-width: 992px) and (min-height: 631px) {
   body {
     overflow: hidden;
-    /* min-height: 100vh; */
+    min-height: 100vh;
   }
 
   .intro-section .intro-content {

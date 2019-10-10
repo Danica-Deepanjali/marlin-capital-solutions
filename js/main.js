@@ -2,6 +2,7 @@ jQuery(function ($) {
   $(document).ready(function () {
     $("#getStarted,#revealContent,#subNav").click(function () {
       $("body").toggleClass("animate");
+      $(".cta-section").removeClass('hover');
     });
   });
 

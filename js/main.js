@@ -76,29 +76,23 @@ jQuery(function ($) {
         });
 
         // // smooth scrolling on mobile
-        // $('a[href="#letsTalk"]')
-        //   .click(function (event) {
-        //     if (
-        //       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-        //       &&
-        //       location.hostname == this.hostname
-        //     ) {
-        //       // Figure out element to scroll to
-        //       var target = $(this.hash);
-        //       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        //       // Does a scroll target exist?
-        //       if (target.length) {
-        //         // Only prevent default if animation is actually gonna happen
-        //         event.preventDefault();
+        $('a[href="#letsTalk"]').on('click', function (event) {
 
-        //         var scrollTop = target.offset().top - $('.sticky-top').height() - 100;
-
-        //         $('html, body').animate({
-        //           scrollTop: scrollTop
-        //         }, 1000)
-        //       }
-        //     }
-        //   });
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            // Store hash
+            var hash = this.hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top -110
+            }, 500, function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
       }
     })
     .resize();

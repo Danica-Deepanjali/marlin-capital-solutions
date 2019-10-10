@@ -978,14 +978,10 @@ button:focus {
     font-size: 26px;
     line-height: 31px;
     font-family: "Rubik", sans-serif;
-    max-width: 15rem;
     font-weight: 400;
     display: block;
   }
 
-  .tabs-side .tab-content #tab-back:before {
-    max-width: 12rem;
-  }
   .tabbed-content .tab-pane::after {
     position: absolute;
     right: 1.75rem;
@@ -1065,6 +1061,14 @@ button:focus {
     margin-bottom: 1rem;
     margin-top: -1.5rem;
   }
+
+  .tabbed-content .tab-pane::before{
+    max-width:15rem;
+  }
+
+  .tabs-side .tab-content #tab-back:before {
+    max-width: 12rem;
+  }
 }
 
 @media (max-width: 350px) {
@@ -1090,9 +1094,6 @@ button:focus {
     margin-bottom: 2rem;
   }
 
-  .tabs-side .tab-content .tab-pane {
-    padding: 20px 15px;
-  }
   .tabbed-content .tab-pane::before {
     font-size: 24px;
     line-height: 30px;

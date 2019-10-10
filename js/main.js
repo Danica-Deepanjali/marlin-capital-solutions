@@ -76,16 +76,29 @@ jQuery(function ($) {
         });
 
         // // smooth scrolling on mobile
-        // $(document).on("click", "a[href*=letsTalk]", function (event) {
-        //   if ($(this.hash).length) {
-        //     $("html, body").animate(
-        //       {
-        //         scrollTop: $(this.hash).offset().top - 100
-        //       },
-        //       500
-        //     );
-        //   }
-        // });
+        $('a[href="#letsTalk"]')
+          .click(function (event) {
+            if (
+              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+              &&
+              location.hostname == this.hostname
+            ) {
+              // Figure out element to scroll to
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+              // Does a scroll target exist?
+              if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+
+                var scrollTop = target.offset().top - $('.sticky-top').height() - 100;
+
+                $('html, body').animate({
+                  scrollTop: scrollTop
+                }, 1000)
+              }
+            }
+          });
       }
     })
     .resize();

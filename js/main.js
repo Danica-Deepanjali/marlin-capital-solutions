@@ -13,7 +13,7 @@ jQuery(function ($) {
   // scroll on laptops
   $(window)
     .on("resize", function () {
-      if ($(window).width() > 991 || $(window).height() > 679) {
+      if ($(window).width() > 991 || $(window).height() > 629) {
         // checks if the specified event is supported by the browser.
         function isEventSupported(eventName) {
           var el = document.createElement("div");
@@ -50,7 +50,7 @@ jQuery(function ($) {
   // tabs to accordion
   $(window)
     .on("resize", function () {
-      if ($(window).width() < 992 || $(window).height() < 680) {
+      if ($(window).width() < 992 || $(window).height() < 630) {
         $(".tab-content .tab-pane").removeClass("fade");
         $(".tab-content .tab-pane").on("click", function () {
           var container = $(this).parents(".tabbed-content"),

@@ -186,7 +186,7 @@ button:focus {
   font-weight: 300;
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-      transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .side-content .modal-links a:hover {
@@ -603,7 +603,6 @@ button:focus {
     transition: all 0.25s ease-in-out 0.2s, padding-bottom 0.1s ease;
   }
 
-  .reveal-content,
   .reveal-content * {
     -webkit-transition: all 0.25s ease-in-out 0.2s;
     -o-transition: all 0.25s ease-in-out 0.2s;
@@ -655,7 +654,7 @@ button:focus {
   .animate .intro-section .intro-content {
     -webkit-transform: translateY(-200%);
     -ms-transform: translateY(-200%);
-        transform: translateY(-200%);
+    transform: translateY(-200%);
     opacity: 0;
   }
 
@@ -663,8 +662,9 @@ button:focus {
     padding: 0;
     -webkit-transform: translateY(-300%);
     -ms-transform: translateY(-300%);
-        transform: translateY(-300%);
+    transform: translateY(-300%);
     opacity: 0;
+    z-index:-10;
   }
 
   .animate .reveal-content * {

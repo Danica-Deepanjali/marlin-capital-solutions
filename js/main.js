@@ -6,8 +6,8 @@ jQuery(function ($) {
   });
 
   $('#revealContent').hover(
-    function () { $(this).parents(".cta-section").addClass('hover') },
-    function () { $(this).parents(".cta-section").removeClass('hover') }
+    function () {$("body:not(.animate) .cta-section").addClass('hover') },
+    function () {$("body:not(.animate) .cta-section").removeClass('hover') }
   )
   // scroll on laptops
   $(window)

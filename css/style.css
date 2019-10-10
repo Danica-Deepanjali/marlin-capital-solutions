@@ -733,7 +733,7 @@ button:focus {
 
   .animate .intro-section .oval-container {
     right: -8.5rem;
-    top: 0rem;
+    top: 2rem;
   }
 
   .tabbed-content {
@@ -802,7 +802,7 @@ button:focus {
 
   .animate .intro-section .oval-container {
     right: -7rem;
-    top: 1rem;
+    top: 7rem;
   }
 }
 
@@ -1322,6 +1322,5 @@ button:focus {
 @media (min-height: 1000px) {
   .animate .intro-section .oval-container {
     top: 4.5rem;
-    right: -4.5rem;
   }
 }

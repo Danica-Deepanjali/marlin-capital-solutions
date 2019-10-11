@@ -58,7 +58,6 @@ h3,
 a {
   text-decoration: none;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -85,7 +84,6 @@ button:focus {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -120,7 +118,6 @@ button:focus {
   justify-content: space-between;
   z-index: 1051;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -189,7 +186,6 @@ button:focus {
   margin: 0 0 6rem 0;
   font-weight: 300;
   -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
@@ -247,7 +243,6 @@ button:focus {
   position: relative;
   z-index: 10;
   -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -330,7 +325,6 @@ button:focus {
   left: 50%;
   background: #4b537d;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -463,13 +457,6 @@ button:focus {
   opacity: 0;
 }
 .modal-backdrop {
-  background: -o-radial-gradient(
-      0% 0%,
-      45.44% 72.71%,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    #f9f9f9;
   background: radial-gradient(
       45.44% 72.71% at 0% 0%,
       #ffffff 0%,
@@ -588,8 +575,8 @@ button:focus {
   .intro-section .intro-content {
     -webkit-transition: opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
     transition: opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
-    -o-transition: transform 0.7s ease-in-out, opacity 0.4s linear;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear;
+    transition: transform 0.7s ease-in-out, opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear,
       -webkit-transform 0.7s ease-in-out;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear,
@@ -602,21 +589,19 @@ button:focus {
     max-height: 10.5rem;
   }
 
-  .reveal-content {
-    -webkit-transition: all 0.25s ease-in-out 0.2s, padding-bottom 0.1s ease;
-    -o-transition: all 0.25s ease-in-out 0.2s, padding-bottom 0.1s ease;
-    transition: all 0.25s ease-in-out 0.2s, padding-bottom 0.1s ease;
+  .reveal-content{
+    -webkit-transition: all 0.25s ease 0.2s;
+    transition: all 0.25s ease 0.2s;
   }
 
-  .reveal-content * {
-    -webkit-transition: all 0.25s ease-in-out 0.2s;
-    -o-transition: all 0.25s ease-in-out 0.2s;
-    transition: all 0.25s ease-in-out 0.2s;
+  .cta-text,
+   .reveal-content *{
+    -webkit-transition:all 0.25s ease;
+    transition:all 0.25s ease;
   }
 
   .oval-container {
     -webkit-transition: all 0.8s linear;
-    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
   }
 
@@ -626,10 +611,8 @@ button:focus {
     right: 6rem;
     z-index: 10;
     -webkit-transform: translate(50%, -50%);
-    -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
     -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
     transition: all 1s ease;
   }
 
@@ -647,7 +630,6 @@ button:focus {
     bottom: 0;
     max-height: 120px;
     -webkit-transition: max-height 0.5s linear;
-    -o-transition: max-height 0.5s linear;
     transition: max-height 0.5s linear;
   }
 
@@ -666,23 +648,24 @@ button:focus {
   /* when animation starts */
   .animate .intro-section .intro-content {
     -webkit-transform: translateY(-200%);
-    -ms-transform: translateY(-200%);
     transform: translateY(-200%);
     opacity: 0;
   }
 
-  .animate .reveal-content {
-    padding: 0;
+  .animate .reveal-content{
     -webkit-transform: translateY(-300%);
-    -ms-transform: translateY(-300%);
     transform: translateY(-300%);
     opacity: 0;
     z-index: -10;
   }
 
+  .animate .cta-text{
+    margin-top:-7rem;
+  }
   .animate .reveal-content * {
     height: 0;
     margin: 0;
+    opacity:0;
   }
 
   .animate .cta-section {
@@ -888,7 +871,6 @@ button:focus {
   .position-centered {
     position: static;
     -webkit-transform: none;
-    -ms-transform: none;
     transform: none;
   }
 
@@ -912,7 +894,6 @@ button:focus {
 
   .side-content .modal-links a {
     -webkit-transform: none;
-    -ms-transform: none;
     transform: none;
     display: inline-block;
     margin: 1rem;
@@ -1000,7 +981,6 @@ button:focus {
     right: 1.75rem;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     content: "\e072";
     display: inline-block;
@@ -1024,7 +1004,6 @@ button:focus {
     opacity: 0;
     height: 0;
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
   }
 

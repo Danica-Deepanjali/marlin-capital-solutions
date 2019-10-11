@@ -77,6 +77,7 @@ jQuery(function ($) {
           // wheelData for mousewheel event
           if (delta > 0) {
             $("body").addClass("animate");
+            $(".cta-section").removeClass('hover');
           } else {
             $("body").removeClass("animate");
           }

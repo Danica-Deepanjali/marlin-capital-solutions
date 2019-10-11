@@ -77,9 +77,13 @@ jQuery(function ($) {
         }
 
         // in browsers where both events are supported.
+        var wheelEvent = isEventSupported("mousewheel")
+          ? "mousewheel"
+          : "wheel";
+        // Now bind the event to the desired element
         var scroll = 0;
         (function () {
-          $(document).on("mousewheel DOMMouseScroll", function (event) {
+          $(document).on(wheelEvent, function (event) {
             var oEvent = event.originalEvent,
               delta2 = oEvent.deltaY || oEvent.wheelDelta;
             if (delta2 > 0) {

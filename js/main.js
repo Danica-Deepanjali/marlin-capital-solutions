@@ -1,22 +1,22 @@
-jQuery(function ($) {
-  $(document).ready(function () {
-    $("#revealContent,#subNav").click(function () {
+jQuery(function($) {
+  $(document).ready(function() {
+    $("#revealContent,#subNav").click(function() {
       $("body").toggleClass("animate");
       $(".cta-section").removeClass("hover");
     });
   });
 
   $("#revealContent").hover(
-    function () {
+    function() {
       $("body:not(.animate) .cta-section").addClass("hover");
     },
-    function () {
+    function() {
       $("body:not(.animate) .cta-section").removeClass("hover");
     }
   );
   // scroll on laptops
   $(window)
-    .on("resize", function () {
+    .on("resize", function() {
       if ($(window).width() > 991 || $(window).height() > 629) {
         $("body").removeClass("animate");
         // checks if the specified event is supported by the browser.
@@ -37,7 +37,7 @@ jQuery(function ($) {
           ? "mousewheel"
           : "wheel";
         // Now bind the event to the desired element
-        $("body").on(wheelEvent, function (e) {
+        $("body").on(wheelEvent, function(e) {
           var oEvent = e.originalEvent,
             delta = oEvent.deltaY || oEvent.wheelDelta;
           // deltaY for wheel event
@@ -61,20 +61,20 @@ jQuery(function ($) {
 
   // tabs to accordion
   $(window)
-    .on("resize", function () {
+    .on("resize", function() {
       if ($(window).width() < 992 || $(window).height() < 630) {
         $(".tab-content .tab-pane").removeClass("fade");
         $(".tab-content .tab-pane").on("click", function () {
           if ($(this).hasClass("active")){
             $(this).removeClass("active");
           }else{
-            $(".tab-content .tab-pane").removeClass("active");
             $(this).addClass("active");
+            $(this).siblings().removeClass("active");
           }
         });
-
+     
         // fix navbar on scroll in mobile devices
-        $(window).scroll(function () {
+        $(window).scroll(function() {
           var topbar = $(".topbar");
           topbarHeight = $(".topbar").height();
           if ($(this).scrollTop() > topbarHeight) {

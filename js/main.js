@@ -50,11 +50,11 @@ jQuery(function ($) {
         });
 
         //if all tabs are closed in mobile view then made first tab active on resizing
-        if (!$(".tab-content > .tab-pane").hasClass("active")) {
-          $(".nav-tabs > a").removeClass("active");
-          $(".nav-tabs > a:first-child").addClass("active");
-          $(".tab-content > div:first-child").addClass("active");
-        }
+        // if (!$(".tab-content > .tab-pane").hasClass("active")) {
+        //   $(".nav-tabs > a").removeClass("active");
+        //   $(".nav-tabs > a:first-child").addClass("active");
+        //   $(".tab-content > div:first-child").addClass("active");
+        // }
       }
     })
     .resize();

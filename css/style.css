@@ -200,6 +200,7 @@ button:focus {
 }
 
 .side-content .subnav svg g{
+  -webkit-transition:all 0.35s ease;
   transition:all 0.35s ease;
 }
 
@@ -576,6 +577,14 @@ button:focus {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -703,6 +712,10 @@ button:focus {
   .animate .intro-section .oval-container {
     right: -8.5rem;
     top: 0;
+  }
+
+    .tab-pane a.toggle{
+    display:none;
   }
 }
 
@@ -1003,7 +1016,9 @@ button:focus {
   .tabbed-content .tab-pane::after {
     position: absolute;
     right: 1.75rem;
-    top:25px;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     content: "\e072";
     display: inline-block;
     font: normal normal normal 24px/1 "iconmonstr-iconic-font";
@@ -1014,12 +1029,14 @@ button:focus {
     color: #4b537d;
     margin-top: 6px;
      -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.1s ease;
     transition: all 0.1s ease;
   }
 
   .tabbed-content .tab-pane.active::after {
-     content: "\e073";
-     color: #00a68a;
+    /* content: "\e073";
+    color: #00a68a; */
+    content:none;
   }
 
   .tabs-side .tab-pane-content *,
@@ -1028,6 +1045,7 @@ button:focus {
     opacity: 0;
     height: 0;
     -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.1s ease;
     transition: all 0.1s ease;
   }
 

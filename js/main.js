@@ -65,14 +65,12 @@ jQuery(function ($) {
       if ($(window).width() < 992 || $(window).height() < 630) {
         $(".tab-content .tab-pane").removeClass("fade");
         $(".tab-content .tab-pane").on("click", function () {
-          var container = $(this).parents(".tabbed-content"),
-            currId = $(this).attr("id");
-          container.find(".nav-tabs a").removeClass("active");
-          $(this).toggleClass("active");
-          $(this).siblings().removeClass("active");
-          container
-            .find('.nav-tabs a[href$="#' + currId + '"]')
-            .addClass("active");
+          if ($(this).hasClass("active")){
+            $(this).removeClass("active");
+          }else{
+            $(".tab-content .tab-pane").removeClass("active");
+            $(this).addClass("active");
+          }
         });
 
         // fix navbar on scroll in mobile devices

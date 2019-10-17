@@ -63,15 +63,29 @@ jQuery(function ($) {
   $(window)
     .on("resize", function () {
       if ($(window).width() < 992 || $(window).height() < 630) {
-        $(".tab-content .tab-pane").removeClass("fade show");
+        // $(".tab-content .tab-pane").removeClass("fade show");
+        // $(".tab-content .tab-pane").on("click", function () {
+        //   var container = $(this).parents(".tabbed-content");
+        //   currId = $(this).attr("id");
+        //   container.find(".nav-tabs a").removeClass("active");
+        //   container.find('.nav-tabs a[href$="#' + currId + '"]').toggleClass("active");
+        //   $(this).toggleClass("active");
+        //   $(this).siblings().removeClass("active");
+        // });
+
+        $(".tab-content .tab-pane").removeClass("fade");
         $(".tab-content .tab-pane").on("click", function () {
-          var container = $(this).parents(".tabbed-content");
-          currId = $(this).attr("id");
+          var container = $(this).parents(".tabbed-content"),
+            currId = $(this).attr("id"),
+            items = container.find(".tab-pane");
           container.find(".nav-tabs a").removeClass("active");
-          container.find('.nav-tabs a[href$="#' + currId + '"]').toggleClass("active");
-          $(this).toggleClass("active");
-          $(this).siblings().removeClass("active");
+          items.removeClass("active");
+          $(this).addClass("active");
+          container
+            .find('.nav-tabs a[href$="#' + currId + '"]')
+            .addClass("active");
         });
+
 
         // fix navbar on scroll in mobile devices
         $(window).scroll(function () {

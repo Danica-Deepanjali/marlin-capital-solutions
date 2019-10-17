@@ -153,6 +153,7 @@ button:focus {
   left: 3rem;
   top: 27.5rem;
   bottom: -0.5rem;
+  z-index:15;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,9 +194,23 @@ button:focus {
   color: #00a589;
 }
 
-.side-content img {
+.side-content .subnav svg {
   max-width: 45px;
   height: auto;
+}
+
+.side-content .subnav svg g{
+  transition:all 0.35s ease;
+}
+
+.side-content .subnav svg #small-line,
+.animate .side-content .subnav svg #big-line{
+  fill:#fff;
+}
+
+.side-content .subnav svg #big-line,
+.animate .side-content .subnav svg #small-line{
+  fill:#4b537d;
 }
 
 /* main-content */
@@ -561,7 +576,14 @@ button:focus {
     transform: rotate(360deg);
   }
 }
-
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* ===========  Media Queries =========== */
 
 /* *** on window width basis ***** */
@@ -578,11 +600,11 @@ button:focus {
     transition: transform 0.7s ease-in-out, opacity 0.4s linear;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear, -webkit-transform 0.7s ease-in-out;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear,
-      -webkit-transform 0.7s ease-in-out;
+    -webkit-transform 0.7s ease-in-out;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear,
-      -webkit-transform 0.7s ease-in-out;
+    -webkit-transform 0.7s ease-in-out;
     transition: transform 0.7s ease-in-out, opacity 0.4s linear,
-      -webkit-transform 0.7s ease-in-out;
+    -webkit-transform 0.7s ease-in-out;
   }
 
   .cta-section.hover {
@@ -628,6 +650,7 @@ button:focus {
     position: fixed;
     width: 100%;
     bottom: 0;
+    z-index: 15;
     max-height: 120px;
     -webkit-transition: max-height 0.5s linear;
     transition: max-height 0.5s linear;
@@ -773,7 +796,7 @@ button:focus {
     bottom: 7rem;
   }
 
-  .side-content img {
+  .side-content .subnav svg {
     max-width: 32px;
     height: auto;
   }
@@ -974,14 +997,13 @@ button:focus {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     display: block;
+
   }
 
   .tabbed-content .tab-pane::after {
     position: absolute;
     right: 1.75rem;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top:25px;
     content: "\e072";
     display: inline-block;
     font: normal normal normal 24px/1 "iconmonstr-iconic-font";
@@ -990,21 +1012,23 @@ button:focus {
     -moz-osx-font-smoothing: grayscale;
     pointer-events: none;
     color: #4b537d;
+    margin-top: 6px;
+     -webkit-transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
 
   .tabbed-content .tab-pane.active::after {
-    content: none;
+     content: "\e073";
+     color: #00a68a;
   }
 
+  .tabs-side .tab-pane-content *,
   .tabs-side .tab-pane-content {
-    height: 0;
-  }
-  .tabs-side .tab-pane-content * {
     visibility: hidden;
     opacity: 0;
     height: 0;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
 
   .tabs-side .tab-pane-content .green-link {
@@ -1012,7 +1036,8 @@ button:focus {
     font-size: 15px;
   }
 
-  .tabs-side .tab-pane.active .tab-pane-content * {
+  .tabs-side .tab-pane.active .tab-pane-content *,
+  .tabs-side .tab-pane.active .tab-pane-content {
     visibility: visible;
     opacity: 1;
     height: auto;
@@ -1020,7 +1045,7 @@ button:focus {
 
   .tabs-side .tab-pane.active .tab-pane-content {
     margin-top: 2rem;
-    height: auto;
+    height:auto;
   }
 
   .tab-pane.active::before {

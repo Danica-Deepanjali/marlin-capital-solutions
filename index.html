@@ -1,323 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Marlin Capital solutions</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,500,700|Roboto:300,400,500,700|Rubik:300,400,700&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <!-- custom style file -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Marlin Capital solutions</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:400,500,700|Roboto:300,400,500,700|Rubik:300,400,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!-- custom style file -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-      <!-- ========= video background ========= -->
-      <video autoplay muted loop id="bgVideo">
-        <source src="images/videos/bg-video-new.mp4" type="video/mp4">
-        <source src="images/videos/bg-video-new.ogg" type="video/ogg">
-      </video>
-      <!-- =========/video background ========= -->
+<body>
 
-      <!-- ========= topbar =========== -->
-      <div class="topbar">
-        <!-- site-logo -->
-        <div class="logo-wrapper">
-          <a href="#"><img src="images/Logo.svg" alt="site-logo" /></a>
+  <!-- ========= video background ========= -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="images/videos/bg-video-new.mp4" type="video/mp4">
+    <source src="images/videos/bg-video-new.ogg" type="video/ogg">
+  </video>
+  <!-- =========/video background ========= -->
+
+  <!-- ========= topbar =========== -->
+  <div class="topbar">
+    <!-- site-logo -->
+    <div class="logo-wrapper">
+      <a href="/"><img src="images/Logo.svg" alt="site-logo" /></a>
+    </div>
+    <a class="d-none d-lg-block phone" href="tel:1-877-311-6756"><i class="im im-phone"></i> 1.877.311.6756</a>
+    <!-- get started button (visible only on mobile) -->
+    <a class="d-flex d-lg-none get-started-btn" href="https://apply.marlincapitalsolutions.com/auth/new-business"
+      target="_blank">get started</a>
+  </div>
+  <!-- ========= /topbar =========== -->
+
+  <!-- ========= main-content =========== -->
+  <main class="main-content">
+    <!-- **** intro text section **** -->
+    <section id="introSec" class="intro-section">
+      <div class="container">
+        <div class="oval-container">
+          <img class="half-circles" src="images/white-circle.svg" alt="white-circles">
         </div>
-          <a class="d-none d-lg-block phone" href="tel:1-888-479-9111"><i class="im im-phone"></i> 1.888.479.9111</a>
-            <!-- get started button (visible only on mobile) -->
-          <a class="d-flex d-lg-none get-started-btn" href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank">get started</a>
-      </div>
-      <!-- ========= /topbar =========== -->
-
-      <!-- ========= main-content =========== -->
-      <main class="main-content">
-        <!-- **** intro text section **** -->
-        <section id="introSec" class="intro-section">
-          <div class="container">
-            <div class="oval-container">
-              <img class="half-circles" src="images/white-circle.svg" alt="white-circles">
-            </div>
-            <div class="concentric-circles">
-              <img class="rotate-ellipse" src="images/Ellipse.svg" alt="rotating-ellipse">
-              <button id="getStarted" type="button" class="get-started-btn">get started</button>
-            </div>
-            <div class="intro-content">
-              <span class="d-block d-lg-none">Get your money fast</span>
-              <h1 class="h1">A working capital loan — from the good guys.</h1>
-              <div class="content text-dark">
-                <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank" class="d-block mb-3 green-link">
-                  Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
-                <p>Running a small business requires financial flexibility, but sometimes cash flow can get in the way. It’s a
-                  scenario that every small business has encountered: Your business has equity, but you’ve encountered a gap in funding
-                  that’s slowing your progress. Maybe you’ve hit a delay in profits. Maybe you’re looking to buy a significant amount
-                  of product at a discount. Maybe an unforeseen repair needs to be made. Taking out a loan is an option that makes a lot of
-                  sense, but how will you assess interest fees, payment plans, and amounts? How can you find a financial partner that
-                  you trust?</p>
-                <h3 class="text-blue">Don't miss your next big opportunity because you don't have access to the funds you
-                  need, and don't jump through hoops when you don’t need to.</h3>
-              </div>
-            </div>
+        <div class="concentric-circles">
+          <img class="rotate-ellipse" src="images/Ellipse.svg" alt="rotating-ellipse">
+          <button type="button" class="get-started-btn"
+            onclick="openInNewTab('https://apply.marlincapitalsolutions.com/auth/new-business');">get started</button>
+        </div>
+        <div class="intro-content">
+          <span class="d-block d-lg-none">Get your money fast</span>
+          <h1 class="h1">A working capital loan — from the good guys.</h1>
+          <div class="content text-dark">
+            <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank"
+              class="d-block mb-3 green-link">
+              Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
+            <p>Running a small business requires financial flexibility, but sometimes cash flow can get in the way. It’s
+              a
+              scenario that every small business has encountered: Your business has equity, but you’ve encountered a gap
+              in funding
+              that’s slowing your progress. Maybe you’ve hit a delay in profits. Maybe you’re looking to buy a
+              significant amount
+              of product at a discount. Maybe an unforeseen repair needs to be made. Taking out a loan is an option that
+              makes a lot of
+              sense, but how will you assess interest fees, payment plans, and amounts? How can you find a financial
+              partner that
+              you trust?</p>
+            <h3 class="text-blue">Don't miss your next big opportunity because you don't have access to the funds you
+              need, and don't jump through hoops when you don’t need to.</h3>
           </div>
-        </section>
-        <!-- **** end intro text section **** -->
+        </div>
+      </div>
+    </section>
+    <!-- **** end intro text section **** -->
 
-        <!-- **** why you need section **** -->
-        <section class="cta-section">
-          <div class="container">
-            <div class="cta-content">
-              <!-- reveal content -->
-              <div id="revealContent" class="d-none d-lg-block reveal-content">
-                <h3 class="text-blue">Why do you need it?</h3>
+    <!-- **** why you need section **** -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <!-- reveal content -->
+          <div id="revealContent" class="d-none d-lg-block reveal-content">
+            <h3 class="text-blue">Why do you need it?</h3>
+          </div>
+          <!-- /reveal content -->
+          <div class="cta-text text-center">
+            <!-- lets-talk-section (visible only on mobile) -->
+            <div class="d-block d-lg-none lets-talk" id="letsTalk">
+              <h3>Let's Talk</h3>
+              <a class="btn-green" href="tel:1-877-311-6756">
+                <i class="im im-phone"></i> 1.877.311.6756</a>
+            </div>
+            <!-- end lets-talk-section (visible only on mobile) -->
+
+            <!-- why you need intro-text -->
+            <div class="intro mx-lg-auto">
+              <h2 class="text-blue">Choose a working capital loan from a lender that understands your small business.
+                Choose Marlin.</h2>
+              <p>At Marlin, our working capital loans set your business up for success. We like to think of ourselves as
+                the
+                “good guys” — we’re not loan sharks out to keep you in debt for decades. Quite the opposite! We assess
+                your business and
+                approve a loan that makes the most sense for your needs, allowing you to pay it off quickly and
+                efficiently.</p>
+            </div>
+            <!-- end why you need intro-text -->
+          </div>
+
+          <!-- ======= tabbed content =======  -->
+          <article class="tabbed-content tabs-side">
+            <nav>
+              <div class="nav nav-tabs" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" href="#tab-approval" data-toggle="tab" role="tab"
+                  aria-controls="tab-approval">
+                  Fast approval</a>
+                <a class="nav-link" href="#tab-payment" data-toggle="tab" role="tab" aria-controls="tab-payment">
+                  Flexible payment plans</a>
+                <a class="nav-link" href="#tab-interest" data-toggle="tab" role="tab"
+                  aria-controls="tab-interest">Interest
+                  that’s in <br>your interest</a>
+                <a class="nav-link" href="#tab-back" data-toggle="tab" role="tab" aria-controls="tab-back">We’ve got
+                  your
+                  back</a>
               </div>
-              <!-- /reveal content -->
-              <div class="cta-text text-center">
-                <!-- lets-talk-section (visible only on mobile) -->
-                <div class="d-block d-lg-none lets-talk" id="letsTalk">
-                  <h3>Let's Talk</h3>
-                  <a class="btn-green" href="tel:1-888-479-9111">
-                    <i class="im im-phone"></i> 1.888.479.9111</a>
-                </div>
-                <!-- end lets-talk-section (visible only on mobile) -->
+            </nav>
 
-                <!-- why you need intro-text -->
-                <div class="intro mx-lg-auto">
-                  <h2 class="text-blue">Choose a working capital loan from a lender that understands your small business. Choose Marlin.</h2>
-                  <p>At Marlin, our working capital loans set your business up for success. We like to think of ourselves as the
-                    “good guys” — we’re not loan sharks out to keep you in debt for decades. Quite the opposite! We assess your business and
-                    approve a loan that makes the most sense for your needs, allowing you to pay it off quickly and efficiently.</p>
-                </div>
-                <!-- end why you need intro-text -->
-              </div>
-
-              <!-- ======= tabbed content =======  -->
-              <article class="tabbed-content tabs-side">
-                <nav>
-                  <div class="nav nav-tabs" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" href="#tab-approval" data-toggle="tab" role="tab" aria-controls="tab-approval">
-                      Fast approval</a>
-                    <a class="nav-link" href="#tab-payment" data-toggle="tab" role="tab" aria-controls="tab-payment">
-                      Flexible payment plans</a>
-                    <a class="nav-link" href="#tab-interest" data-toggle="tab" role="tab" aria-controls="tab-interest">Interest
-                      that’s in <br>your interest</a>
-                    <a class="nav-link" href="#tab-back" data-toggle="tab" role="tab" aria-controls="tab-back">We’ve got your
-                      back</a>
-                  </div>
-                </nav>
-
-                <div class="tab-content">
-                  <!-- fast approval tab -->
-                  <div class="tab-pane fade show active" id="tab-approval" role="tabpanel" data-title="Fast approval">
-                    <div class="tab-pane-content">
-                      <p>We pride ourselves on providing fast approval: The first step to getting approved for our working
-                        capital loan is an online form that tells us what we need to know. We don’t keep our clients bound to restrictive covenants
-                        or quarterly assessments. At Marlin, we provide a quick online application form that lets you apply for your loan in
-                        minutes — any amount from $5,000 to up to $200,000.</p>
-                      <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank" class="d-block green-link">
-                        Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
-                      <div class="tab-img">
-                        <div class="oval-container">
-                          <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
-                          <div class="position-centered">
-                            <img src="images/Money_Icon.svg" alt="money-icon">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- flexible payment plans tab -->
-                  <div class="tab-pane fade" id="tab-payment" role="tabpanel" data-title="Flexible payment plans">
-                    <div class="tab-pane-content">
-                      <p>Looking to pay off fast or need a bit more time? We offer flexible payment plans that feature daily,
-                        weekly,and monthly repayment options, depending on your loan choice and credit score. And if you need to
-                        pay on the go, our services extend across online and mobile services, for easy payments — fast.</p>
-                      <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank" class="d-block green-link">
-                        Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
-                      <div class="tab-img">
-                        <div class="oval-container">
-                          <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
-                          <div class="position-centered">
-                            <img src="images/Computer.svg" alt="computer-icon">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                  <!-- Interest that’s in your interest tab -->
-                  <div class="tab-pane fade" id="tab-interest" role="tabpanel" data-title="Interest that’s in your interest">
-                    <div class="tab-pane-content">
-                      <p>Need another working capital loan or looking to renew? Most lenders charge interest on top of interest,
-                        but our methods are fairly unique: Once 50% of your loan is paid back through its term and you’d like to renew, we will
-                        waive the remaining interest on that loan. This can save you up to 7% interest.</p>
-                      <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank" class="d-block green-link">
-                        Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
-                      <div class="tab-img">
-                        <div class="oval-container">
-                          <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
-                          <div class="position-centered">
-                            <img src="images/Calc.svg" alt="calculator-icon">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- We’ve got your back tab -->
-                  <div class="tab-pane fade" id="tab-back" role="tabpanel" data-title="We’ve got your back">
-                    <div class="tab-pane-content">
-                      <p>At Marlin, our working capital loans are built with the customer in mind — and we’re happy to help keep
-                        your small business thriving.</p>
-                      <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank" class="d-block green-link">
-                        Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
-                      <div class="tab-img">
-                        <div class="oval-container">
-                          <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
-                          <div class="position-centered">
-                            <img src="images/money-bag.svg" alt="money-bag">
-                          </div>
-                        </div>
+            <div class="tab-content">
+              <!-- fast approval tab -->
+              <div class="tab-pane fade show active" id="tab-approval" role="tabpanel" data-title="Fast approval">
+                <div class="tab-pane-content">
+                  <p>We pride ourselves on providing fast approval: The first step to getting approved for our working
+                    capital loan is an online form that tells us what we need to know. We don’t keep our clients bound
+                    to restrictive covenants
+                    or quarterly assessments. At Marlin, we provide a quick online application form that lets you apply
+                    for your loan in
+                    minutes — any amount from $5,000 to up to $200,000.</p>
+                  <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank"
+                    class="d-block green-link">
+                    Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
+                  <div class="tab-img">
+                    <div class="oval-container">
+                      <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
+                      <div class="position-centered">
+                        <img src="images/Money_Icon.svg" alt="money-icon">
                       </div>
                     </div>
                   </div>
                 </div>
-              </article>
-              <!-- ======= end tabbed content ===== -->
+              </div>
+              <!-- flexible payment plans tab -->
+              <div class="tab-pane fade" id="tab-payment" role="tabpanel" data-title="Flexible payment plans">
+                <div class="tab-pane-content">
+                  <p>Looking to pay off fast or need a bit more time? We offer flexible payment plans that feature
+                    daily,
+                    weekly,and monthly repayment options, depending on your loan choice and credit score. And if you
+                    need to
+                    pay on the go, our services extend across online and mobile services, for easy payments — fast.</p>
+                  <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank"
+                    class="d-block green-link">
+                    Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
+                  <div class="tab-img">
+                    <div class="oval-container">
+                      <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
+                      <div class="position-centered">
+                        <img src="images/Computer.svg" alt="computer-icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Interest that’s in your interest tab -->
+              <div class="tab-pane fade" id="tab-interest" role="tabpanel"
+                data-title="Interest that’s in your interest">
+                <div class="tab-pane-content">
+                  <p>Need another working capital loan or looking to renew? Most lenders charge interest on top of
+                    interest,
+                    but our methods are fairly unique: Once 50% of your loan is paid back through its term and you’d
+                    like to renew, we will
+                    waive the remaining interest on that loan. This can save you up to 7% interest.</p>
+                  <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank"
+                    class="d-block green-link">
+                    Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
+                  <div class="tab-img">
+                    <div class="oval-container">
+                      <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
+                      <div class="position-centered">
+                        <img src="images/Calc.svg" alt="calculator-icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- We’ve got your back tab -->
+              <div class="tab-pane fade" id="tab-back" role="tabpanel" data-title="We’ve got your back">
+                <div class="tab-pane-content">
+                  <p>At Marlin, our working capital loans are built with the customer in mind — and we’re happy to help
+                    keep
+                    your small business thriving.</p>
+                  <a href="https://apply.marlincapitalsolutions.com/auth/new-business" target="_blank"
+                    class="d-block green-link">
+                    Get Started<img src="images/Arrow.svg" alt="right-arrow"></a>
+                  <div class="tab-img">
+                    <div class="oval-container">
+                      <img class="half-circles" src="images/gray-circle.svg" alt="gray-circles">
+                      <div class="position-centered">
+                        <img src="images/money-bag.svg" alt="money-bag">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-        </section>
-        <!-- **** end why you need section ****-->
-      </main>
-      <!-- ========= /main-content =========== -->
-
-      <!-- ========= side-content =========== -->
-      <aside class="side-content">
-        <img class="d-none d-lg-block" src="images/Sub_Nav.svg" alt="sub-nav" id="subNav">
-        <div class="modal-links">
-          <a href="#" data-toggle="modal" data-target="#privacy-policy">Privacy Policy</a>
-          <a href="#" data-toggle="modal" data-target="#terms-of-use">Terms of use</a>
+          </article>
+          <!-- ======= end tabbed content ===== -->
         </div>
-      </aside>
-      <!-- ========= /side-content =========== -->
+      </div>
+    </section>
+    <!-- **** end why you need section ****-->
+  </main>
+  <!-- ========= /main-content =========== -->
 
-    <!-- ========== modal popups ============== -->
+  <!-- ========= side-content =========== -->
+  <aside class="side-content">
+    <div class="d-none d-lg-block subnav" id="subNav">
+      <svg width="44" height="17" viewBox="0 0 44 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="big-line">
+          <rect y="14" width="44" height="3" rx="1.5" />
+        </g>
+        <g id="small-line">
+          <rect width="30" height="3" rx="1.5" />
+        </g>
+      </svg>
+    </div>
+    <div class="modal-links">
+      <a href="#" data-toggle="modal" data-target="#privacy-policy">Privacy Policy</a>
+      <a href="#" data-toggle="modal" data-target="#terms-of-use">Terms of use</a>
+    </div>
+  </aside>
+  <!-- ========= /side-content =========== -->
 
-      <!-- **** privacy policy Modal **** -->
-      <div class="modal fade" id="privacy-policy" tabindex="-1" role="dialog" aria-labelledby="privacyPolicyTitle" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true"><i class="im im-x-mark"></i></span>
-              </button>
-              <h5 class="modal-title">Privacy Policy</h5>
-              <div class="modal-text">
-                <p>This Privacy Statement applies to apply.marlincapitalsolutions.com, and other websites owned and operated by Marlin
-                  Business Services Corp. and its affiliates (“Marlin”, “We”). This Privacy Statement describes how Marlin collects and
-                  uses the information you provide, or which is automatically generated when you interact with our website. It also
-                  describes the choices available to you regarding the use of, your access to, and how to update and correct your
-                  information. At Marlin, we recognize the importance of your privacy. As a result, Marlin is committed to protecting
-                  the
-                  confidentiality and security of the personal and company information you choose to provide us.</p>
-                <p>If you have an unresolved privacy or data use concern that we have not addressed satisfactorily, please contact our
-                  U.S.-based third party dispute resolution provider (free of charge) at
-                  <a href="https://feedback-form.truste.com/watchdog/request">https://feedback-form.truste.com/watchdog/request</a>.</p>
-                <p>You may contact us at:</p>
-                <address>
-                  Marlin Business Services Corp.<br>
-                  300 Fellowship Road<br>
-                  Mount Laurel, NJ 08054<br>
-                  Attention: President
-                </address>
-                <p>Marlin’s Privacy Statement is set forth below:</p>
-                <p>1. COLLECTION AND USE OF INFORMATION</p>
-                <p>You may be asked to provide certain information about you and/or
-                  your company if you elect to apply for financing through the Site or if you attempt to use certain Site functions. The
-                  decision to provide this information is entirely yours.</p>
-                <p>We collect the following identifying information from you when you elect to apply for financing:</p>
-                <ul>
-                  <li>Information such as business name, contact email address, address, phone number;</li>
-                  <li>Tax ID;</li>
-                  <li>Financial Information such as bank name, routing number, account number;</li>
-                  <li>Beneficial ownership information.</li>
-                </ul>
-                <!-- add your additional privacy policy content here -->
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nihil eveniet porro alias hic ipsa tempora vel?
-                  Voluptatum veritatis alias quia blanditiis fuga saepe cum velit ea? Quibusdam, nemo corporis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nihil eveniet porro alias hic ipsa tempora vel?
-                  Voluptatum veritatis alias quia blanditiis fuga saepe cum velit ea? Quibusdam, nemo corporis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nihil eveniet porro alias hic ipsa tempora vel?
-                  Voluptatum veritatis alias quia blanditiis fuga saepe cum velit ea? Quibusdam, nemo corporis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nihil eveniet porro alias hic ipsa tempora vel?
-                  Voluptatum veritatis alias quia blanditiis fuga saepe cum velit ea? Quibusdam, nemo corporis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nihil eveniet porro alias hic ipsa tempora vel?
-                  Voluptatum veritatis alias quia blanditiis fuga saepe cum velit ea? Quibusdam, nemo corporis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nihil eveniet porro alias hic ipsa tempora vel?
-                  Voluptatum veritatis alias quia blanditiis fuga saepe cum velit ea? Quibusdam, nemo corporis!</p>
-              </div>
-            </div>
+  <!-- ========== modal popups ============== -->
+
+  <!-- **** privacy policy Modal **** -->
+  <div class="modal fade" id="privacy-policy" tabindex="-1" role="dialog" aria-labelledby="privacyPolicyTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="im im-x-mark"></i></span>
+          </button>
+          <h5 class="modal-title">Privacy Policy</h5>
+          <!-- <div class="modal-text">
+              <p>This Privacy Statement applies to apply.marlincapitalsolutions.com, and other websites owned and operated by Marlin
+                Business Services Corp. and its affiliates (“Marlin”, “We”). This Privacy Statement describes how Marlin collects and
+                uses the information you provide, or which is automatically generated when you interact with our website. It also
+                describes the choices available to you regarding the use of, your access to, and how to update and correct your
+                information. At Marlin, we recognize the importance of your privacy. As a result, Marlin is committed to protecting
+                the
+                confidentiality and security of the personal and company information you choose to provide us.</p>
+              <p>If you have an unresolved privacy or data use concern that we have not addressed satisfactorily, please contact our
+                U.S.-based third party dispute resolution provider (free of charge) at
+                <a href="https://feedback-form.truste.com/watchdog/request">https://feedback-form.truste.com/watchdog/request</a>.</p>
+              <p>You may contact us at:</p>
+              <address>
+                Marlin Business Services Corp.<br>
+                300 Fellowship Road<br>
+                Mount Laurel, NJ 08054<br>
+                Attention: President
+              </address>
+              <p>Marlin’s Privacy Statement is set forth below:</p>
+              <p>1. COLLECTION AND USE OF INFORMATION</p>
+              <p>You may be asked to provide certain information about you and/or
+                your company if you elect to apply for financing through the Site or if you attempt to use certain Site functions. The
+                decision to provide this information is entirely yours.</p>
+              <p>We collect the following identifying information from you when you elect to apply for financing:</p>
+              <ul>
+                <li>Information such as business name, contact email address, address, phone number;</li>
+                <li>Tax ID;</li>
+                <li>Financial Information such as bank name, routing number, account number;</li>
+                <li>Beneficial ownership information.</li>
+              </ul>
+            </div> -->
+          <div class="modal-text">
+            <h3>Effective Date: 6/29/2019</h3>
+            <p>&nbsp;&nbsp;<br />
+              This Privacy Statement applies to <a
+                href="https://apply.marlincapitalsolutions.com/apply/">apply.marlincapitalsolutions.com</a>, and other
+              websites owned and operated by Marlin Business Services Corp. and its affiliates (“Marlin”, “We”). This
+              Privacy Statement describes how Marlin collects and uses the information you provide, or which is
+              automatically generated when you interact with our website. It also describes the choices available to you
+              regarding the use of, your access to, and how to update and correct your information. At Marlin, we
+              recognize the importance of your privacy. As a result, Marlin is committed to protecting the
+              confidentiality and security of the personal and company information you choose to provide us.</p>
+            <p>If you have an unresolved privacy or data use concern that we have not addressed satisfactorily, please
+              contact our U.S.-based third party dispute resolution provider (free of charge) at <a
+                href="https://feedback-form.truste.com/watchdog/request" target="_blank"
+                rel="noopener">https://feedback-form.truste.com/watchdog/request</a>.</p>
+            <div><a href="http://privacy.truste.com/privacy-seal/validation?rid=19ac75ef-2adc-4a4c-9cab-7e9e794a8c71"
+                target="_blank" rel="noopener"><img style="border: none;"
+                  src="http://privacy-policy.truste.com/privacy-seal/seal?rid=19ac75ef-2adc-4a4c-9cab-7e9e794a8c71"
+                  alt="TRUSTe" /></a></div>
+            <p>&nbsp;<br />
+              You may contact us at:</p>
+            <p>Marlin Business Services Corp.<br />
+              300 Fellowship Road<br />
+              Mount Laurel, NJ 08054<br />
+              Attention: President</p>
+            <p>Marlin’s Privacy Statement is set forth below:</p>
+            <h3>1. COLLECTION AND USE OF INFORMATION</h3>
+            <p>You may be asked to provide certain information about you and/or your company if you elect to apply for
+              financing through the Site or if you attempt to use certain Site functions. The decision to provide this
+              information is entirely yours.</p>
+            <p>We collect the following identifying information from you when you elect to apply for financing:</p>
+            <ul>
+              <li>Information such as business name, contact email address, address, phone number;</li>
+              <li>Tax ID;</li>
+              <li>Financial Information such as bank name, routing number, account number;</li>
+              <li>Beneficial ownership information.</li>
+            </ul>
+            <p>We collect information on the beneficial owners of your company for purposes of verifying their identity
+              only. The United States Government implemented the beneficial ownership rule to help deter and investigate
+              financial crimes. Marlin will maintain beneficial ownership information in our records pursuant to this
+              Privacy Notice.</p>
+            <p>We may use Plaid Inc. (&#8220;Plaid&#8221;) to gather your data from financial institutions. By using our
+              service, you grant Marlin and Plaid the right, power, and authority to act on your behalf to access and
+              transmit your personal and financial information from the relevant financial institution. You agree to
+              your personal and financial information being transferred, stored, and processed by Plaid in accordance
+              with the <a href="https://plaid.com/legal">Plaid Privacy Policy</a>.</p>
+            <p>Additionally, in the event you are providing a personal guarantee we will collect the following personal
+              information:</p>
+            <ul>
+              <li>Date of Birth;</li>
+              <li>Social Security Number.</li>
+            </ul>
+            <p><strong>User Data Supplementation</strong></p>
+            <p>We may receive information about you from other sources, including publicly available databases or third
+              parties from whom we have purchased data, and combine this data with information we already have about
+              you. This helps us to update, expand and analyze our records, identify new customers, and provide products
+              and services that may be of interest to you. If you provide us personal information about others, or if
+              others give us your information, we will only use that information for the specific reason for which it
+              was provided to us.</p>
+            <p>Examples of the types of personal information that may be obtained from public sources or purchased from
+              third parties and combined with information we already have about you may include:</p>
+            <ul>
+              <li>Address information about you from third party sources, such as the U.S. Postal Service, to verify
+                your address as part of our KYC program to prevent fraud.</li>
+              <li>Purchased marketing data about our customers from third parties that is combined with information we
+                already have about you, to create more tailored advertising and products.</li>
+            </ul>
+            <p>Marlin will use the information you furnish to evaluate your application, provide you with updates
+              regarding the application’s status and, if appropriate, initiate the funding process. Marlin will also use
+              the information you provide to service and administer any accounts you may have with Marlin and to offer
+              you other products and services available through Marlin or other entities. In addition, Marlin may use
+              the information provided by the Site users for statistical, marketing or other purposes.</p>
+            <p>Marlin limits employee access to the information you provide to those employees who have a business
+              reason to know such information. Marlin may also share your information with its affiliated companies as
+              may be permitted by applicable law.</p>
+            <h3>2. SHARING OF INFORMATION WITH THIRD PARTIES</h3>
+            <p>We will share your personal information with third parties only in the ways that are described in this
+              privacy policy.</p>
+            <p>Marlin may share the information you choose to provide with its suppliers, financing sources, equipment
+              vendor contacts, affiliates and other business customers (collectively, the “Third Parties”) in order to:
+            </p>
+            <ul>
+              <li>Evaluate and process your application for funding;</li>
+              <li>Service your account;</li>
+              <li>Offer products and services that may be of interest to you; and/or</li>
+              <li>Conduct and administer its business.</li>
+            </ul>
+            <p>In addition, Marlin may share the information you choose to provide:</p>
+            <ul>
+              <li>As required by law, such as to comply with an order, subpoena, audit, bankruptcy proceeding, or
+                similar legal process in certain situations;</li>
+              <li>If Marlin is required to disclose personal data in response to lawful requests by public authorities,
+                including to meet national security or law enforcement requirements;</li>
+              <li>When we believe in good faith that disclosure is necessary to protect our rights, protect your safety
+                or the safety of others, investigate fraud, or respond to a government request;</li>
+              <li>If Marlin is involved in a merger, acquisition, or sale of all or a portion of its assets, in which
+                case you will be notified via email and/or a prominent notice on our website of any change in ownership,
+                uses of your personal information, and choices you may have regarding your personal information; and/or
+              </li>
+              <li>With any other third party with your prior consent.</li>
+            </ul>
+            <p>The Third Parties with whom Marlin conducts business are aware of the importance of your privacy and are
+              expected to take all reasonable steps to assure that your information is treated confidentially and
+              securely.</p>
+            <h3>3. INACCURATE INFORMATION</h3>
+            <p>Marlin may retain information such as your company name, principal officer names, company address,
+              personal and corporate identification information such as government issued tax identification numbers,
+              driver’s license information, corporate tax returns (if provided) or other similar information used to
+              confirm your company or an individual’s identity. You have the right to amend or update inaccurate or
+              incomplete personal information, request deletion of your personal information, or request that we no
+              longer use it. Upon request, Marlin will provide you with information about whether we hold any of your
+              personal information. If you believe that Marlin’s records contain inaccurate or incomplete information
+              about you or your company, you may correct, update, amend, delete/remove information by emailing our
+              Customer Support at <a href="mailto:info@marlincapitalsolutions.com" target="_blank"
+                rel="noopener noreferrer">info@marlincapitalsolutions.com</a> or by contacting us by telephone or postal
+              mail at the contact information listed below. We will review your concerns, respond within a reasonable
+              time frame and correct our records if necessary.</p>
+            <h3>4. SECURITY OF INFORMATION</h3>
+            <p>Marlin protects your information by maintaining security procedures to prevent unauthorized access to
+              your information. Marlin uses SSL encryption (Secured Socket Layer) Technology and other forms of
+              technology to help ensure the protection of your information. If you have any questions about the security
+              of your personal information, you can contact us at <a href="mailto:info@marlincapitalsolutions.com"
+                target="_blank" rel="noopener noreferrer">info@marlincapitalsolutions.com</a>.</p>
+            <h3>5. “COOKIES” and other Tracking Technologies</h3>
+            <p>Technologies such as cookies, beacons, tags, script or similar technologies are used by Marlin and our
+              partners, affiliates, analytics or service providers. These technologies are used in analyzing trends,
+              administering the website, tracking users’ movements around the Site, and gathering demographic
+              information about our user base as a whole. We may receive reports based on the use of these technologies
+              by these companies on an individual and aggregated basis.</p>
+            <p>Cookies are small pieces of data that are stored on your device’s browser by a website you visit. Cookies
+              keep track of your movements within the site, remember your user preferences, and help to make a website
+              more useful to you. Marlin utilizes cookies for user authentication, to prevent fraud, to help our Site
+              deliver the appropriate services to its users, and for analytics and marketing. Users can control the use
+              of cookies at the browser level by managing preferences. Unless you have adjusted your browser setting to
+              reject or disable cookies, our system will issue cookies when you access or use our Site. If you disable
+              cookies, you may still use our website, but your ability to use some features or areas of our website may
+              be limited. For general information about cookies or to learn how to manage or delete cookies, visit
+              www.allaboutcookies.org.</p>
+            <p>As is true of most websites, we gather certain information automatically and store it in log files. This
+              information may include users’ movement and interaction with the Site, including mouse movements,
+              non-sensitive text entered, pages visited and links clicked, as well as internet protocol (IP) addresses,
+              browser type, internet service provider (ISP), cookie information, referring/exit pages, operating system,
+              date/time stamp, and/or clickstream data (collectively, “Usage Data”). Marlin’s purpose in collecting
+              Usage Data is to better understand how Marlin’s users interact with the Site. Usage Data helps us to keep
+              our website fresh and functional and enables us to tailor content to a user’s interests.</p>
+            <p>We may combine this automatically collected log information with other information we collect about you.
+              We do this to improve services we offer you, to improve marketing, analytics, or Site functionality.</p>
+            <p>We use Local Shared Objects, Local Storage, such as HTML5, to store content information and preferences.
+              Various browsers may offer their own management tools for removing HTML5.</p>
+            <p>We partner with a third party to display advertising on our website and to manage our advertising on
+              other sites. Our third-party partner may use cookies or similar technologies in order to provide you
+              advertising based upon your browsing activities and interests. If you wish to opt out of interest-based
+              advertising, click <a href="http://preferences-mgr.truste.com/" target="_blank" rel="noopener">here.</a>
+              Please note you will continue to receive generic ads.</p>
+            <h3>6. CHILDREN</h3>
+            <p>Marlin does not knowingly solicit any information from or market its services or products to children.
+            </p>
+            <h3>7. AUTHORIZATION AND CONSENT TO USE INFORMATION</h3>
+            <p>By providing information to Marlin through this Site or otherwise, you authorize and consent to Marlin’s
+              use of such information in accordance with this Privacy Statement and in other similar manners.</p>
+            <h3>8. Testimonial</h3>
+            <p>We display personal testimonials of satisfied customers on our website in addition to other endorsements.
+              With your consent, we may post your testimonial along with your name. If you wish to update or delete your
+              testimonial, you can contact us at <a href="mailto:info@marlincapitalsolutions.com" target="_blank"
+                rel="noopener noreferrer">info@marlincapitalsolutions.com</a>.</p>
+            <h3>9. Third Party Link</h3>
+            <p>This Privacy Statement only applies to the use and disclosure of information collected through our Site.
+              Our website includes links to other websites whose privacy practices may differ from those of Marlin. If
+              you submit personal information to any of those websites, your information is governed by their privacy
+              statements. We encourage you to carefully read the privacy statement of any website you visit.</p>
+            <h3>10. Data Retention</h3>
+            <p>We will retain your information for as long as your account is active or as needed to provide you
+              services. We will retain and use your information as necessary to comply with our legal obligations,
+              resolve disputes, and enforce our agreements.</p>
+            <h3>11. Material Change</h3>
+            <p>We may update this Privacy Statement to reflect changes to our information practices. If we make any
+              material changes we will notify you or our Client by email (sent to the email address specified in your
+              account) or by means of a notice on this website prior to the change becoming effective. We encourage you
+              to periodically review this page for the latest information on our privacy practices.</p>
+            <p>If you have any questions about Marlin’s Privacy Statement or the use of the information you choose to
+              provide to Marlin, please contact Marlin directly at (888) 479-9111, by email at <a
+                href="mailto:info@marlincapitalsolutions.com">info@marlincapitalsolutions.com</a> or by mail at 300
+              Fellowship Rd. Mt. Laurel, NJ 08054.</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- **** Terms of use Modal **** -->
-      <div class="modal fade" id="terms-of-use" tabindex="-1" role="dialog" aria-labelledby="termsOfUseTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true"><i class="im im-x-mark"></i></span>
-              </button>
-              <h5 class="modal-title">Terms of Use</h5>
-              <div class="modal-text">
-                <p>Marlin Business Bank, its subsidiaries and affiliates (“Marlin”) require that all visitors to the Marlin web site
-                  (the
-                  “Site”) comply with the following terms of use. By accessing the Site, you agree to be bound by these terms of use.
-                  Access to and use of the Site are subject to all applicable laws.</p>
-                <p>1. Right to modify. Marlin reserves the right to modify the terms of use governing the Site at any time. When
-                  modifications to the terms of use appear on the Site, users
-                  are deemed to be aware of and bound by all such modifications.</p>
+  <!-- **** Terms of use Modal **** -->
+  <div class="modal fade" id="terms-of-use" tabindex="-1" role="dialog" aria-labelledby="termsOfUseTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="im im-x-mark"></i></span>
+          </button>
+          <h5 class="modal-title">Terms of Use</h5>
+          <div class="modal-text">
+            <p>Marlin Business Bank, its subsidiaries and affiliates (“Marlin”) require that all visitors to the Marlin
+              web site
+              (the
+              “Site”) comply with the following terms of use. By accessing the Site, you agree to be bound by these
+              terms of use.
+              Access to and use of the Site are subject to all applicable laws.</p>
+            <p>1. Right to modify. Marlin reserves the right to modify the terms of use governing the Site at any time.
+              When
+              modifications to the terms of use appear on the Site, users
+              are deemed to be aware of and bound by all such modifications.</p>
 
-                <p>2. Violations of Terms of Use. Marlin reserves the right
-                  to pursue all remedies available at law or otherwise for violations of the terms of use of the Site, including the
-                  right to block access to the Site.</p>
+            <p>2. Violations of Terms of Use. Marlin reserves the right
+              to pursue all remedies available at law or otherwise for violations of the terms of use of the Site,
+              including the
+              right to block access to the Site.</p>
 
-                <p>3. DISCLAIMER OF WARRANTIES. ALL INFORMATION, CONTENT, PRODUCTS, SERVICES, LINKS, GRAPHICS,
-                  PROGRAMS AND OTHER MATERIAL CONTAINED ON (OR LINKED TO) THE SITE ARE PROVIDED TO YOU “AS IS” WITH ALL FAULTS. MARLIN
-                  DISCLAIMS ALL WARRANTIES OF ANY KIND EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
-                  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, SECURITY, NON-INFRINGEMENT OF THIRD PARTIES OR ACCURACY. IN
-                  NO EVENT SHALL MARLIN BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL LOSS OR DAMAGES ARISING
-                  OUT OF THE USE OR INABILITY TO USE THIS SITE OR A LINKED SITE OR ANY PART OF SUCH SITES. IT IS THE USER’S RESPONSIBILITY
-                  TO EVALUATE THE ACCURACY, COMPLETENESS AND USEFULNESS OF ANY OPINION, ADVICE, SERVICE OR OTHER CONTENT AVAILABLE FROM
-                  THIS SITE OR OBTAINED FROM A LINKED SITE. USE OF LINKED SITES IS AT YOUR OWN RISK.</p>
+            <p>3. DISCLAIMER OF WARRANTIES. ALL INFORMATION, CONTENT, PRODUCTS, SERVICES, LINKS, GRAPHICS,
+              PROGRAMS AND OTHER MATERIAL CONTAINED ON (OR LINKED TO) THE SITE ARE PROVIDED TO YOU “AS IS” WITH ALL
+              FAULTS. MARLIN
+              DISCLAIMS ALL WARRANTIES OF ANY KIND EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+              MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, SECURITY, NON-INFRINGEMENT OF THIRD PARTIES OR
+              ACCURACY. IN
+              NO EVENT SHALL MARLIN BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL LOSS OR
+              DAMAGES ARISING
+              OUT OF THE USE OR INABILITY TO USE THIS SITE OR A LINKED SITE OR ANY PART OF SUCH SITES. IT IS THE USER’S
+              RESPONSIBILITY
+              TO EVALUATE THE ACCURACY, COMPLETENESS AND USEFULNESS OF ANY OPINION, ADVICE, SERVICE OR OTHER CONTENT
+              AVAILABLE FROM
+              THIS SITE OR OBTAINED FROM A LINKED SITE. USE OF LINKED SITES IS AT YOUR OWN RISK.</p>
 
-                <p>4. Intellectual Property and Content. The trademarks, trade names, logos, service marks and other intellectual
-                  property (collectively, the “Marks”)
-                  displayed on the Site are the property of Marlin or other third parties. Users are prohibited from using the Marks for
-                  any purpose without the express written consent of the owner of the Marks. All information and content available on the
-                  Site is owned by Marlin. Users are prohibited from copying, distributing, transmitting, modifying, displaying, publishing,
-                  selling or licensing the information and content available on the Site without the express written consent of Marlin.
-                </p>
+            <p>4. Intellectual Property and Content. The trademarks, trade names, logos, service marks and other
+              intellectual
+              property (collectively, the “Marks”)
+              displayed on the Site are the property of Marlin or other third parties. Users are prohibited from using
+              the Marks for
+              any purpose without the express written consent of the owner of the Marks. All information and content
+              available on the
+              Site is owned by Marlin. Users are prohibited from copying, distributing, transmitting, modifying,
+              displaying, publishing,
+              selling or licensing the information and content available on the Site without the express written consent
+              of Marlin.
+            </p>
 
-                <p>5. Communications Sent to Marlin. Any communications or material sent to Marlin through the Site shall become
-                  property of Marlin and may be used by Marlin for any purpose. Marlin shall not have any duty to treat such information
-                  confidentially, except as may be required by law or otherwise set forth in the Site’s Privacy Statement. Users should
-                  not send information through electronic mail that the user wishes to remain confidential.</p>
-              </div>
-            </div>
+            <p>5. Communications Sent to Marlin. Any communications or material sent to Marlin through the Site shall
+              become
+              property of Marlin and may be used by Marlin for any purpose. Marlin shall not have any duty to treat such
+              information
+              confidentially, except as may be required by law or otherwise set forth in the Site’s Privacy Statement.
+              Users should
+              not send information through electronic mail that the user wishes to remain confidential.</p>
           </div>
         </div>
       </div>
-    <!-- ========== /modals ============== -->
+    </div>
+  </div>
+  <!-- ========== /modals ============== -->
 
-    <!-- ******** scripts ********** -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <!-- ******** scripts ********** -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Ads: 795629181 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-795629181"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-795629181');
+  </script>
+  <!-- Pixel Name: ENGAGE - Marlin_Engagement Pixel - Pixel ID: 1155184 DO NOT MODIFY -->
+  <img style="display:none;width:1px;" src="https://secure.adnxs.com/px?id=1155184&t=2" width="1" height="1" />
+  <!-- End of Conversion Pixel -->
+  <img src="https://ib.adnxs.com/seg?add=18825311" style="display:none" width="1" height="1" />
+</body>
+
 </html>

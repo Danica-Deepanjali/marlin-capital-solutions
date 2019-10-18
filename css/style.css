@@ -1014,6 +1014,8 @@ button:focus {
     line-height: 31px;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
   }
 
   .tabbed-content .tab-pane .collapse-btn:after {
@@ -1030,6 +1032,8 @@ button:focus {
     -moz-osx-font-smoothing: grayscale;
     pointer-events: none;
     color: #4b537d;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
   }
 
   .tabbed-content .tab-pane .collapse-btn[aria-expanded="true"]{

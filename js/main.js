@@ -23,8 +23,8 @@ jQuery(function($) {
         $(".tab-pane-content")
           .removeClass("collapse")
           .removeAttr("data-parent", "#mobile-accordion");
-        $("#mobile-accordion .tab-pane.active .collapse-btn").removeAttr("aria-expanded", "true");
-        $("#mobile-accordion .tab-pane.active .collapse").removeClass("show");
+        $("#mobile-accordion .tab-pane:first-child .collapse-btn").removeAttr("aria-expanded", "true");
+        $("#mobile-accordion .tab-pane:first-child .tab-pane-content").removeClass("show");
           // checks if the specified event is supported by the browser.
         function isEventSupported(eventName) {
           var el = document.createElement("div");
@@ -58,36 +58,42 @@ jQuery(function($) {
     })
     .resize();
 
-  // tabs to accordion
   $(window)
-    .on("resize", function() {
-      if ($(window).width() < 992 || $(window).height() < 630) {
-
-        $(".tab-content .tab-pane").removeClass("fade");
-        //add accordion properties
-        $(".tab-pane-content")
-          .addClass("collapse")
-          .attr("data-parent", "#mobile-accordion");
-        $("#mobile-accordion .tab-pane.active .collapse-btn").attr("aria-expanded", "true");
-        $("#mobile-accordion .tab-pane.active .collapse").addClass("show");
-
-        // fix navbar on scroll in mobile devices
-        $(window).scroll(function() {
-          var topbar = $(".topbar");
-          topbarHeight = $(".topbar").height();
-          if ($(this).scrollTop() > topbarHeight) {
-            topbar.addClass("sticky");
-          } else {
-            topbar.removeClass("sticky");
-          }
-        });
-      }
+    .on("resize", function () {
+      retainTabOpen()
     })
     .resize();
-});
+
+function retainTabOpen() {
+  if ($(window).width() < 992 || $(window).height() < 630) {
+    $(".tab-content .tab-pane").removeClass("fade");
+    //add accordion properties
+    $(".tab-pane-content")
+      .addClass("collapse")
+      .attr("data-parent", "#mobile-accordion");
+    // fix navbar on scroll in mobile devices
+    $(window).scroll(function () {
+      var topbar = $(".topbar");
+      topbarHeight = $(".topbar").height();
+      if ($(this).scrollTop() > topbarHeight) {
+        topbar.addClass("sticky");
+      } else {
+        topbar.removeClass("sticky");
+      }
+    });
+  }
+}
+  if ($(window).width() < 992 || $(window).height() < 630) {
+  if (!$(".tab-pane-content").hasClass("show")) {
+    $("#mobile-accordion .tab-pane:first-child .collapse-btn").attr("aria-expanded", "true");
+    $("#mobile-accordion .tab-pane:first-child .tab-pane-content").addClass("show");
+  }
+}
 
 // to open link in new tab
 function openInNewTab(url) {
   var win = window.open(url, "_blank");
   win.focus();
 }
+
+});

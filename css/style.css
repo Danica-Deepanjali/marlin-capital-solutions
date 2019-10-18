@@ -1034,8 +1034,8 @@ button:focus {
 
   .tabbed-content .tab-pane .collapse-btn[aria-expanded="true"] span {
     color: #00a68a;
-    font-size: 29px;
-    line-height: 34px;
+    /* font-size: 29px;
+    line-height: 34px; */
   }
   .tabbed-content .tab-pane .collapse-btn[aria-expanded="true"]:after {
     content: "\e073";

@@ -1032,6 +1032,9 @@ button:focus {
     color: #4b537d;
   }
 
+  .tabbed-content .tab-pane .collapse-btn[aria-expanded="true"]{
+    margin-bottom: 2rem;
+  }
   .tabbed-content .tab-pane .collapse-btn[aria-expanded="true"] span {
     color: #00a68a;
     /* font-size: 29px;
@@ -1045,10 +1048,6 @@ button:focus {
   .tabs-side .tab-pane-content .green-link {
     margin-top: 3rem;
     font-size: 15px;
-  }
-
-  .tabs-side .tab-pane .tab-pane-content {
-    margin-top: 2rem;
   }
 
   .tab-pane .green-link {

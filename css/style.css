@@ -647,7 +647,8 @@ button:focus {
     transition: all 1s ease;
   }
 
-  body.modal-open .concentric-circles {
+  body.modal-open .concentric-circles,
+   .tabbed-content .tab-pane .collapse-btn {
     display: none;
   }
 
@@ -1002,20 +1003,22 @@ button:focus {
     border-radius: 6px;
   }
 
-  .tabbed-content .tab-pane::before {
-    content: attr(data-title);
-    color: #4b537d;
+  .tabbed-content .tab-pane .collapse-btn {
+    display: block;
+    position: relative;
+  }
+
+  .tabbed-content .tab-pane .collapse-btn span{
+     color: #4b537d;
     font-size: 26px;
     line-height: 31px;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
-    display: block;
-
   }
 
-  .tabbed-content .tab-pane::after {
+  .tabbed-content .tab-pane .collapse-btn:after {
     position: absolute;
-    right: 1.75rem;
+    right: 0.5rem;
     top:50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -1027,26 +1030,16 @@ button:focus {
     -moz-osx-font-smoothing: grayscale;
     pointer-events: none;
     color: #4b537d;
-    margin-top: 6px;
-     -webkit-transition: all 0.3s ease;
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease;
   }
 
-  .tabbed-content .tab-pane.active::after {
-    /* content: "\e073";
-    color: #00a68a; */
-    content:none;
+  .tabbed-content .tab-pane .collapse-btn[aria-expanded="true"] span {
+    color: #00a68a;
+    font-size: 29px;
+    line-height: 34px;
   }
-
-  .tabs-side .tab-pane-content *,
-  .tabs-side .tab-pane-content {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    -webkit-transition: all 0.3s ease;
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease;
+  .tabbed-content .tab-pane .collapse-btn[aria-expanded="true"]:after {
+    content: "\e073";
+    color: #00a68a;
   }
 
   .tabs-side .tab-pane-content .green-link {
@@ -1054,22 +1047,8 @@ button:focus {
     font-size: 15px;
   }
 
-  .tabs-side .tab-pane.active .tab-pane-content *,
-  .tabs-side .tab-pane.active .tab-pane-content {
-    visibility: visible;
-    opacity: 1;
-    height: auto;
-  }
-
-  .tabs-side .tab-pane.active .tab-pane-content {
+  .tabs-side .tab-pane .tab-pane-content {
     margin-top: 2rem;
-    height:auto;
-  }
-
-  .tab-pane.active::before {
-    color: #00a68a;
-    font-size: 29px;
-    line-height: 34px;
   }
 
   .tab-pane .green-link {
@@ -1097,11 +1076,12 @@ button:focus {
     margin-top: -1.5rem;
   }
 
-  .tabbed-content .tab-pane::before {
+  .tabbed-content .tab-pane .collapse-btn span {
     max-width: 15rem;
+    display: inline-block;
   }
 
-  .tabs-side .tab-content #tab-back:before {
+  .tabs-side .tab-content #tab-back .collapse-btn span {
     max-width: 12rem;
   }
 }
@@ -1129,12 +1109,12 @@ button:focus {
     margin-bottom: 2rem;
   }
 
-  .tabbed-content .tab-pane::before {
+  .tabbed-content .tab-pane .collapse-btn span {
     font-size: 24px;
     line-height: 30px;
   }
 
-  .tabbed-content .tab-pane::after {
+   .tabbed-content .tab-pane .collapse-btn:after {
     font-size: 20px;
     right: 1.25rem;
   }
@@ -1156,6 +1136,10 @@ button:focus {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+
+     /* .tabbed-content .tab-pane .collapse-btn {
+       display: none;
+     } */
 }
 
 /* for medium height desktops and laptops */

@@ -24,6 +24,7 @@ jQuery(function($) {
           .removeClass("collapse")
           .removeAttr("data-parent", "#mobile-accordion");
         $("#mobile-accordion .tab-pane:first-child .collapse-btn").removeAttr("aria-expanded", "true");
+        $("#mobile-accordion .tab-pane:first-child .collapse").removeClass("show");
           // checks if the specified event is supported by the browser.
         function isEventSupported(eventName) {
           var el = document.createElement("div");
@@ -68,17 +69,7 @@ jQuery(function($) {
           .addClass("collapse")
           .attr("data-parent", "#mobile-accordion");
         $("#mobile-accordion .tab-pane:first-child .collapse-btn").attr("aria-expanded", "true");
-        $(".tab-content .tab-pane").on("click", function() {
-          var container = $(this).parents(".tabbed-content"),
-            currId = $(this).attr("id"),
-            items = container.find(".tab-pane");
-          container.find(".nav-tabs a").removeClass("active");
-          items.removeClass("active");
-          $(this).addClass("active");
-          container
-            .find('.nav-tabs a[href$="#' + currId + '"]')
-            .addClass("active");
-        });
+        $("#mobile-accordion .tab-pane:first-child .collapse").addClass("show");
 
         // fix navbar on scroll in mobile devices
         $(window).scroll(function() {

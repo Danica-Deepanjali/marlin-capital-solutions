@@ -23,8 +23,6 @@ jQuery(function($) {
         $(".tab-pane-content")
           .removeClass("collapse")
           .removeAttr("data-parent", "#mobile-accordion");
-        $("#mobile-accordion .tab-pane:first-child .collapse-btn").removeAttr("aria-expanded", "true");
-        $("#mobile-accordion .tab-pane:first-child .tab-pane-content").removeClass("show");
           // checks if the specified event is supported by the browser.
         function isEventSupported(eventName) {
           var el = document.createElement("div");
